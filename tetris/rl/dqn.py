@@ -473,6 +473,17 @@ class DQNAgent:
         )
 
 
+def _resolve_evaluation_device(device: str) -> str:
+    """Resolve the playback device without requiring a specific accelerator."""
+    if device != "auto":
+        return device
+    if getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available():
+        return "mps"
+    if torch.cuda.is_available():
+        return "cuda"
+    return "cpu"
+
+
 def load_agent_for_evaluation(path, device: str = "cpu") -> DQNAgent:
     """A saved agent in playing mode: greedy, and told to stop exploring.
 
@@ -485,7 +496,7 @@ def load_agent_for_evaluation(path, device: str = "cpu") -> DQNAgent:
     """
     from .registry import load_agent
 
-    agent = load_agent(path, device=device)
+    agent = load_agent(path, device=_resolve_evaluation_device(device))
     agent.set_epsilon(0.0)
     return agent
 

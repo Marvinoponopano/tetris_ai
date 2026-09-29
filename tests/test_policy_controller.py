@@ -21,6 +21,7 @@ from tetris.policy_controller import (
     PolicyController,
     STUCK_LIMIT,
     best_checkpoint,
+    best_records,
     build_agent,
 )
 
@@ -353,6 +354,25 @@ def test_a_broken_record_does_not_break_the_lookup(tmp_path):
     broken.mkdir(parents=True)
     (broken / "best.json").write_text("{ this is not json")
     assert best_checkpoint(str(tmp_path)).score_mean == 300.0
+
+
+def test_a_record_whose_weights_are_not_in_the_checkout_is_not_a_model(tmp_path):
+    """The repository ignores 880 of the 882 training checkpoints (3.4 GB, all
+    regenerable), so a fresh clone has records describing files that are not
+    there. The lookup must skip them instead of answering with a model that
+    cannot be loaded -- and `best_checkpoint` must fall through to the weights
+    that *are* present, even when a missing one scored higher.
+    """
+    present = write_best(tmp_path, "K", 2, "best_ep004000_score_mean_825.500.pt", 825.5)
+    gone = write_best(tmp_path, "M", 1, "best_ep004500_score_mean_849.750.pt", 849.75)
+    os.remove(gone)                                   # not shipped in the repo
+
+    found = best_records(str(tmp_path))
+
+    assert [record.path for record in found] == [str(present)]
+    assert best_checkpoint(str(tmp_path)).path == str(present)
+    listed = best_records(str(tmp_path), include_missing=True)
+    assert [record.path for record in listed] == [str(gone), str(present)]
 
 
 def test_the_real_project_has_a_trained_agent_to_play():

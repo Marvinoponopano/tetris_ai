@@ -91,6 +91,9 @@ def build_parser() -> argparse.ArgumentParser:
                         help="a saved model to load (default: the best one on disk)")
     parser.add_argument("--agent", choices=AGENTS, default="dqn",
                         help="who plays (default dqn; --model implies dqn)")
+    parser.add_argument("--device", choices=("auto", "cpu", "mps", "cuda"),
+                        default="auto",
+                        help="DQN device (default: auto, prefers mps/cuda)")
     parser.add_argument("--lookahead", type=int, default=0,
                         help="search depth for --agent heuristic (0 = one ply)")
     parser.add_argument("--speed", type=speed_value, default=DEFAULT_SPEED,
@@ -240,7 +243,7 @@ def resolve_agent(args) -> Dict[str, object]:
         raise SystemExit(missing_model_message(checkpoint))
     info["checkpoint"] = checkpoint
     info["before"] = fingerprint(checkpoint)
-    agent = build_agent("dqn", checkpoint=checkpoint)
+    agent = build_agent("dqn", checkpoint=checkpoint, device=args.device)
     info["agent"] = agent
 
     campaign = campaign_of(checkpoint)
@@ -268,6 +271,9 @@ def main(argv=None) -> int:
     if checkpoint is not None:
         print(f"model: {checkpoint}")
     print(f"agent: {info['label']} ({args.agent})")
+    device = getattr(info["agent"], "device", None)
+    if device is not None:
+        print(f"device: {device}")
     print(f"reward: {info['weights']}")
     print(f"speed: {SPEED_LEVELS[args.speed][0]} ({speed_detail(args.speed)})")
     print(f"keys: {KEYS}")

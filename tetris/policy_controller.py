@@ -93,7 +93,8 @@ class BestCheckpoint(NamedTuple):
                 f"{self.episode}, from {self.source})")
 
 
-def best_records(root: str = "experiments/rl") -> "List[BestCheckpoint]":
+def best_records(root: str = "experiments/rl",
+                 include_missing: bool = False) -> "List[BestCheckpoint]":
     """Every campaign record under `root`, highest score first.
 
     Each campaign keeps the best model per seed next to a `best.json` that says
@@ -101,6 +102,13 @@ def best_records(root: str = "experiments/rl") -> "List[BestCheckpoint]":
     has to remember. The file *name* is resolved against the directory it was
     found in (a `best.json` also stores the absolute path from the machine that
     trained it, which stops being true as soon as the project moves).
+
+    Records whose weights are not in this checkout are skipped: the repository
+    ships the checkpoints the documentation points at and ignores the other 880
+    (3.4 GB, regenerable -- see `checkpoints/README.md`), so a fresh clone has
+    plenty of `best.json` files describing files that are not there. Offering one
+    of those as "the best model" would only produce a load error later. Pass
+    `include_missing=True` to list the records anyway, for diagnosis.
     """
     import json
     import pathlib
@@ -115,9 +123,12 @@ def best_records(root: str = "experiments/rl") -> "List[BestCheckpoint]":
         name = entry.get("checkpoint")
         if not name or "score_mean" not in entry:
             continue
+        path = record_path.parent / name
+        if not include_missing and not path.exists():
+            continue                          # weights not in this checkout
         found.append(
             BestCheckpoint(
-                path=str(record_path.parent / name),
+                path=str(path),
                 score_mean=float(entry["score_mean"]),
                 episode=int(entry.get("episode", -1)),
                 source=f"{record_path.parent.parent.parent.name}/"
@@ -139,7 +150,8 @@ def best_checkpoint(root: str = "experiments/rl") -> BestCheckpoint:
     return found[0]
 
 
-def build_agent(name: str, checkpoint: Optional[str] = None, lookahead: int = 0):
+def build_agent(name: str, checkpoint: Optional[str] = None, lookahead: int = 0,
+                device: str = "cpu"):
     """An agent by name. Heavy imports (torch) happen only for the DQN.
 
     Every option satisfies the same contract -- `choose_action(state,
@@ -158,7 +170,7 @@ def build_agent(name: str, checkpoint: Optional[str] = None, lookahead: int = 0)
         from tetris.rl.dqn import load_agent_for_evaluation
 
         path = checkpoint or best_checkpoint().path
-        return load_agent_for_evaluation(path)
+        return load_agent_for_evaluation(path, device=device)
     raise ValueError(f"unknown agent {name!r}; expected random, heuristic or dqn")
 
 
