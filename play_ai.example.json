@@ -1,0 +1,8 @@
+{
+  "model": "experiments/rl/G/seed0/best/best_ep003250_score_mean_822.500.pt",
+  "speed": "normal",
+  "cell": 34,
+  "seed": 5,
+  "debug": false,
+  "grid": "lines"
+}

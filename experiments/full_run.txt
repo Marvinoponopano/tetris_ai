@@ -1,0 +1,12 @@
+lookahead 0: 158,083 mean score, 156.9 mean lines, 39.23 lines/100 pieces, peak 10.2, 0.7 ms/decision, 9s
+lookahead 1: 161,107 mean score, 158.6 mean lines, 39.65 lines/100 pieces, peak 6.5, 14.0 ms/decision, 169s
+lookahead 2 (beam 2): 161,291 mean score, 158.7 mean lines, 39.67 lines/100 pieces, peak 5.5, 40.8 ms/decision, 489s
+
+depth beam games   score mean   score max lines mean lines max lines/100 len mean  peak  dead   ms/dec  total s
+---------------------------------------------------------------------------------------------------------------
+    0    2    30      158,083     167,412     156.90       159     39.23    400.0  10.2     0      0.7      8.6
+    1    2    30      161,107     168,014     158.60       160     39.65    400.0   6.5     0     14.0    168.5
+    2    2    30      161,291     167,794     158.70       159     39.67    400.0   5.5     0     40.8    489.2
+
+saved /Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/lookahead_summary.json
+exit=0

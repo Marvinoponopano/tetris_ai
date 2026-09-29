@@ -1,0 +1,25 @@
+{
+  "episodes": 6000,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "buffer_size": 50000,
+  "gamma": 0.99,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_steps": 20000,
+  "target_update_steps": 500,
+  "min_buffer_size": 1000,
+  "max_pieces": 200,
+  "hidden_sizes": [
+    256,
+    256
+  ],
+  "reward": {
+    "per_piece": 5.0
+  },
+  "seed": 1,
+  "device": "cpu",
+  "checkpoint_every": 1000,
+  "log_every": 200,
+  "label": "M: the combination, and the only arm allowed two changes: dueling (the one arm of the five that improved the agent: +31.5 mean score, 4/5 seeds) with the five-plane encoding (the one that made the heuristic's ranking easier to learn: 45.0% supervised agreement against 32.7% on three planes). They attack different halves -- what the value is worth, and what the network can see -- so this arm is the honest test of whether the round-2 gains add up or overlap.\n\nPredicts: at or above K. If it lands at K's level the two do overlap; if it lands above, they compose."
+}

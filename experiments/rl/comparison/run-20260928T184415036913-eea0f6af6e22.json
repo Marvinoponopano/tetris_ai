@@ -1,0 +1,131 @@
+{
+  "run_id": "20260928T184415036913-eea0f6af6e22",
+  "agent": "dqn",
+  "config_id": "eea0f6af6e22",
+  "config": {
+    "agent": "dqn",
+    "num_games": 8,
+    "seed": 20260928,
+    "max_pieces": 1000,
+    "lookahead_depth": 0,
+    "beam": 4,
+    "weights": null,
+    "checkpoint": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/G/seed0/best/best_ep003250_score_mean_822.500.pt",
+    "label": "G-seed0"
+  },
+  "num_games": 8,
+  "seed": 20260928,
+  "max_pieces": 1000,
+  "started_at": "2026-09-28T18:44:15.036913+00:00",
+  "finished_at": "2026-09-28T18:44:15.075091+00:00",
+  "stats": {
+    "games": 8,
+    "score_mean": 822.5,
+    "score_median": 720.0,
+    "score_min": 632.0,
+    "score_max": 1072.0,
+    "score_stdev": 187.91715499883756,
+    "lines_mean": 0.75,
+    "lines_max": 2.0,
+    "lines_total": 6.0,
+    "pieces_mean": 31.625,
+    "pieces_max": 40.0,
+    "game_length_mean": 31.625,
+    "game_length_max": 40.0,
+    "games_capped": 0.0
+  },
+  "diagnostics": {
+    "boards_scored": 253.0,
+    "decisions": 253.0,
+    "deaths": 8.0,
+    "lines_per_100_pieces": 2.372,
+    "peak_column_mean": 19.875,
+    "peak_column_max": 20.0
+  },
+  "timing": {
+    "elapsed_seconds": 0.038084,
+    "seconds_per_game": 0.00476,
+    "games_per_second": 210.064,
+    "pieces_per_second": 6643.29,
+    "decisions_per_second": 6643.29,
+    "boards_per_second": 6643.29,
+    "boards_per_decision": 1.0
+  },
+  "environment": {
+    "python_version": "3.9.6",
+    "python_implementation": "CPython",
+    "executable": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "numpy": "2.0.2",
+    "pygame": "2.6.1"
+  },
+  "profile": null,
+  "result_path": null,
+  "games": [
+    {
+      "game": 0,
+      "seed": 20260928,
+      "score": 1000,
+      "lines_cleared": 2,
+      "pieces": 34,
+      "capped": false
+    },
+    {
+      "game": 1,
+      "seed": 20260929,
+      "score": 632,
+      "lines_cleared": 0,
+      "pieces": 24,
+      "capped": false
+    },
+    {
+      "game": 2,
+      "seed": 20260930,
+      "score": 1072,
+      "lines_cleared": 2,
+      "pieces": 40,
+      "capped": false
+    },
+    {
+      "game": 3,
+      "seed": 20260931,
+      "score": 682,
+      "lines_cleared": 0,
+      "pieces": 30,
+      "capped": false
+    },
+    {
+      "game": 4,
+      "seed": 20260932,
+      "score": 1064,
+      "lines_cleared": 2,
+      "pieces": 34,
+      "capped": false
+    },
+    {
+      "game": 5,
+      "seed": 20260933,
+      "score": 704,
+      "lines_cleared": 0,
+      "pieces": 31,
+      "capped": false
+    },
+    {
+      "game": 6,
+      "seed": 20260934,
+      "score": 690,
+      "lines_cleared": 0,
+      "pieces": 27,
+      "capped": false
+    },
+    {
+      "game": 7,
+      "seed": 20260935,
+      "score": 736,
+      "lines_cleared": 0,
+      "pieces": 33,
+      "capped": false
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "metric": "score_mean",
+  "higher_is_better": true,
+  "best": {
+    "episode": 1000,
+    "metric": "score_mean",
+    "value": 678.0,
+    "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/D/seed0/best/best_ep001000_score_mean_678.000.pt",
+    "checkpoint": "best_ep001000_score_mean_678.000.pt",
+    "score_mean": 678.0,
+    "lines_mean": 0.125,
+    "pieces_mean": 27.0,
+    "training_epsilon": 0.8399091666666667,
+    "decisions": 20222,
+    "learn_steps": 19223
+  },
+  "improvements": [
+    {
+      "episode": 0,
+      "metric": "score_mean",
+      "value": 248.75,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/D/seed0/best/best_ep000000_score_mean_248.750.pt",
+      "checkpoint": "best_ep000000_score_mean_248.750.pt",
+      "score_mean": 248.75,
+      "lines_mean": 0.0,
+      "pieces_mean": 12.375,
+      "training_epsilon": 1.0,
+      "decisions": 0,
+      "learn_steps": 0
+    },
+    {
+      "episode": 250,
+      "metric": "score_mean",
+      "value": 521.5,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/D/seed0/best/best_ep000250_score_mean_521.500.pt",
+      "checkpoint": "best_ep000250_score_mean_521.500.pt",
+      "score_mean": 521.5,
+      "lines_mean": 0.0,
+      "pieces_mean": 21.125,
+      "training_epsilon": 0.9599495833333334,
+      "decisions": 5059,
+      "learn_steps": 4060
+    },
+    {
+      "episode": 500,
+      "metric": "score_mean",
+      "value": 622.5,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/D/seed0/best/best_ep000500_score_mean_622.500.pt",
+      "checkpoint": "best_ep000500_score_mean_622.500.pt",
+      "score_mean": 622.5,
+      "lines_mean": 0.0,
+      "pieces_mean": 27.25,
+      "training_epsilon": 0.92060375,
+      "decisions": 10029,
+      "learn_steps": 9030
+    },
+    {
+      "episode": 1000,
+      "metric": "score_mean",
+      "value": 678.0,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/D/seed0/best/best_ep001000_score_mean_678.000.pt",
+      "checkpoint": "best_ep001000_score_mean_678.000.pt",
+      "score_mean": 678.0,
+      "lines_mean": 0.125,
+      "pieces_mean": 27.0,
+      "training_epsilon": 0.8399091666666667,
+      "decisions": 20222,
+      "learn_steps": 19223
+    }
+  ]
+}

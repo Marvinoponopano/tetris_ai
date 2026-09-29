@@ -1,0 +1,7 @@
+# Test runner.
+pytest>=7.0
+
+# Optional for now: the engine is pure Python and never imports NumPy, but the
+# board already converts with `np.array(state.board)` and the AI parts later
+# will need it. Install it now so everything lives in one place.
+numpy>=1.21

@@ -1,0 +1,23 @@
+{
+  "episodes": 6000,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "buffer_size": 50000,
+  "gamma": 0.99,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_steps": 20000,
+  "target_update_steps": 500,
+  "min_buffer_size": 1000,
+  "max_pieces": 200,
+  "hidden_sizes": [
+    256,
+    256
+  ],
+  "reward": null,
+  "seed": 2,
+  "device": "cpu",
+  "checkpoint_every": 1000,
+  "log_every": 200,
+  "label": "F: targeted change 3 from the diagnosis: anneal epsilon inside the run (20k steps, not 120k) so most of the training happens with the policy it will be evaluated as, not with a mostly random one (every other knob identical to C)"
+}

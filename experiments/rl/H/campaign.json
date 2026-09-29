@@ -1,0 +1,56 @@
+{
+  "name": "H",
+  "variant": null,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "metric": "score_mean",
+  "eval_every": 250,
+  "eval_games": 8,
+  "eval_seed": 20260928,
+  "eval_max_pieces": 1000,
+  "log_every": 200,
+  "note": "reward ratio: per_line 10 -> 50 and per_piece 5 -> 1. G's income is 89% per-piece and 7% per-line, and a line clear (+10) nets about the same as the two pieces of survival it costs (+10, minus ~2 of holes and height), so max-Q has no reason to prefer clearing. This makes a line worth 50 pieces of survival and survival worth little, so the only way to earn is to clear. Predicts fewer pieces and score but more lines per 100 pieces; if it only loses score and clears no more, the objective was never the binding constraint (everything else identical to G)",
+  "output_dir": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl",
+  "config": {
+    "episodes": 6000,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "buffer_size": 50000,
+    "gamma": 0.99,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 20000,
+    "target_update_steps": 500,
+    "min_buffer_size": 1000,
+    "max_pieces": 200,
+    "hidden_sizes": [
+      256,
+      256
+    ],
+    "reward": {
+      "per_line": 50.0,
+      "per_piece": 1.0
+    },
+    "seed": 0,
+    "device": "cpu",
+    "checkpoint_every": 1000,
+    "log_every": 200,
+    "label": "H: reward ratio: per_line 10 -> 50 and per_piece 5 -> 1. G's income is 89% per-piece and 7% per-line, and a line clear (+10) nets about the same as the two pieces of survival it costs (+10, minus ~2 of holes and height), so max-Q has no reason to prefer clearing. This makes a line worth 50 pieces of survival and survival worth little, so the only way to earn is to clear. Predicts fewer pieces and score but more lines per 100 pieces; if it only loses score and clears no more, the objective was never the binding constraint (everything else identical to G)"
+  },
+  "config_id": "63951946ff80",
+  "environment": {
+    "python_version": "3.9.6",
+    "python_implementation": "CPython",
+    "executable": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "numpy": "2.0.2",
+    "pygame": "2.6.1"
+  },
+  "written_at": "2026-09-28T20:36:33.522236+00:00"
+}

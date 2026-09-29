@@ -1,0 +1,23 @@
+{
+  "episodes": 300,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "buffer_size": 50000,
+  "gamma": 0.99,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_steps": 5000,
+  "target_update_steps": 250,
+  "min_buffer_size": 500,
+  "max_pieces": 200,
+  "hidden_sizes": [
+    256,
+    256
+  ],
+  "reward": null,
+  "seed": 1,
+  "device": "cpu",
+  "checkpoint_every": 100,
+  "log_every": 50,
+  "label": "A: small: does anything move at all, and is the plumbing honest?"
+}

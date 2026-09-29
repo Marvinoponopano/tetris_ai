@@ -1,0 +1,16 @@
+# PyTorch, for the reinforcement-learning agent only (tetris/rl/).
+#
+# Everything else -- the engine, the environment, the terminal game, the pygame
+# window, the heuristic agent, the evaluation harness and the experiment
+# framework -- runs without it, and its tests skip when it is missing. The wheel
+# is a few hundred megabytes, which is exactly why it is not in requirements.txt.
+#
+# On macOS and Linux, CPU-only is what pip installs by default. For a CUDA box:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+torch>=2.0
+
+# The figures for a training campaign (`tetris/rl/plots.py`): training reward,
+# lines, loss and the greedy evaluation score, raw plus the moving average drawn
+# over the top of it. Nothing else in the project needs it -- the engine, the
+# agents, the evaluation harness and training itself run without it.
+matplotlib>=3.5

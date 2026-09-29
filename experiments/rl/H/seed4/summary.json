@@ -1,0 +1,2406 @@
+{
+  "seed": 4,
+  "directory": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4",
+  "training": {
+    "config": {
+      "episodes": 6000,
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "buffer_size": 50000,
+      "gamma": 0.99,
+      "epsilon_start": 1.0,
+      "epsilon_end": 0.05,
+      "epsilon_decay_steps": 20000,
+      "target_update_steps": 500,
+      "min_buffer_size": 1000,
+      "max_pieces": 200,
+      "hidden_sizes": [
+        256,
+        256
+      ],
+      "reward": {
+        "per_line": 50.0,
+        "per_piece": 1.0
+      },
+      "seed": 4,
+      "device": "cpu",
+      "checkpoint_every": 1000,
+      "log_every": 200,
+      "label": "H: reward ratio: per_line 10 -> 50 and per_piece 5 -> 1. G's income is 89% per-piece and 7% per-line, and a line clear (+10) nets about the same as the two pieces of survival it costs (+10, minus ~2 of holes and height), so max-Q has no reason to prefer clearing. This makes a line worth 50 pieces of survival and survival worth little, so the only way to earn is to clear. Predicts fewer pieces and score but more lines per 100 pieces; if it only loses score and clears no more, the objective was never the binding constraint (everything else identical to G)"
+    },
+    "config_id": "70090ac62ce9",
+    "description": "dqn 6000 episodes, seed 4, lr 0.001, batch 64, buffer 50,000, gamma 0.99, eps 1->0.05 over 20,000, target every 500, 256x256, cpu, [per_line=50, per_piece=1]",
+    "started_at": "2026-09-28T20:36:35.073926+00:00",
+    "finished_at": "2026-09-28T20:45:02.539133+00:00",
+    "elapsed_seconds": 507.464,
+    "episodes_trained": 6000,
+    "total_decisions": 149624,
+    "total_learn_steps": 148625,
+    "best_score": 1058,
+    "final_epsilon": 0.05,
+    "reward_first_window": -149.75,
+    "reward_last_window": -141.85,
+    "checkpoints": [
+      "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/training/checkpoint_1000.pt",
+      "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/training/checkpoint_2000.pt",
+      "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/training/checkpoint_3000.pt",
+      "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/training/checkpoint_4000.pt",
+      "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/training/checkpoint_5000.pt",
+      "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/training/checkpoint_6000.pt"
+    ],
+    "output_dir": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/training",
+    "log": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/training/train_log.csv",
+    "environment": {
+      "python_version": "3.9.6",
+      "python_implementation": "CPython",
+      "executable": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/.venv/bin/python",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "machine": "arm64",
+      "numpy": "2.0.2",
+      "pygame": "2.6.1",
+      "torch_version": "2.8.0"
+    }
+  },
+  "evaluations": [
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 0,
+      "decisions": 0,
+      "learn_steps": 0,
+      "epsilon": 1.0,
+      "train_seconds": 0.829,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 248.75,
+      "score_median": 244.0,
+      "score_max": 270.0,
+      "score_stdev": 17.035677,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 12.375,
+      "pieces_max": 13.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0174,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 266,
+          "lines_cleared": 0,
+          "pieces": 13,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 238,
+          "lines_cleared": 0,
+          "pieces": 12,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 250,
+          "lines_cleared": 0,
+          "pieces": 12,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 268,
+          "lines_cleared": 0,
+          "pieces": 13,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 232,
+          "lines_cleared": 0,
+          "pieces": 12,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 230,
+          "lines_cleared": 0,
+          "pieces": 12,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 270,
+          "lines_cleared": 0,
+          "pieces": 13,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 236,
+          "lines_cleared": 0,
+          "pieces": 12,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 250,
+      "decisions": 4900,
+      "learn_steps": 3901,
+      "epsilon": 0.76725,
+      "train_seconds": 9.639,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 566.75,
+      "score_median": 573.0,
+      "score_max": 742.0,
+      "score_stdev": 134.185107,
+      "lines_mean": 0.125,
+      "lines_max": 1.0,
+      "pieces_mean": 23.375,
+      "pieces_max": 30.0,
+      "lines_per_100_pieces": 0.5348,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0345,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 516,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 674,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 574,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 308,
+          "lines_cleared": 0,
+          "pieces": 11,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 490,
+          "lines_cleared": 0,
+          "pieces": 18,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 572,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 658,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 742,
+          "lines_cleared": 1,
+          "pieces": 24,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 500,
+      "decisions": 9614,
+      "learn_steps": 8615,
+      "epsilon": 0.543335,
+      "train_seconds": 19.807,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 522.5,
+      "score_median": 480.0,
+      "score_max": 808.0,
+      "score_stdev": 146.501097,
+      "lines_mean": 0.125,
+      "lines_max": 1.0,
+      "pieces_mean": 23.125,
+      "pieces_max": 34.0,
+      "lines_per_100_pieces": 0.5405,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0368,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 514,
+          "lines_cleared": 0,
+          "pieces": 23,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 394,
+          "lines_cleared": 0,
+          "pieces": 15,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 808,
+          "lines_cleared": 1,
+          "pieces": 34,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 540,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 444,
+          "lines_cleared": 0,
+          "pieces": 20,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 376,
+          "lines_cleared": 0,
+          "pieces": 18,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 446,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 658,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 750,
+      "decisions": 14855,
+      "learn_steps": 13856,
+      "epsilon": 0.294388,
+      "train_seconds": 31.326,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 618.5,
+      "score_median": 627.0,
+      "score_max": 668.0,
+      "score_stdev": 45.80393,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 24.625,
+      "pieces_max": 27.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.04,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 556,
+          "lines_cleared": 0,
+          "pieces": 22,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 668,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 642,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 542,
+          "lines_cleared": 0,
+          "pieces": 21,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 660,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 628,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 626,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 626,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 1000,
+      "decisions": 21004,
+      "learn_steps": 20005,
+      "epsilon": 0.05,
+      "train_seconds": 45.431,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 693.75,
+      "score_median": 666.0,
+      "score_max": 926.0,
+      "score_stdev": 114.689332,
+      "lines_mean": 0.125,
+      "lines_max": 1.0,
+      "pieces_mean": 29.625,
+      "pieces_max": 37.0,
+      "lines_per_100_pieces": 0.4219,
+      "games_capped": 0.0,
+      "eval_seconds": 0.047,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 656,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 782,
+          "lines_cleared": 0,
+          "pieces": 36,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 636,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 626,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 926,
+          "lines_cleared": 1,
+          "pieces": 37,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 698,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 550,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 676,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 1250,
+      "decisions": 27248,
+      "learn_steps": 26249,
+      "epsilon": 0.05,
+      "train_seconds": 60.186,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 597.0,
+      "score_median": 600.0,
+      "score_max": 674.0,
+      "score_stdev": 49.442607,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 26.75,
+      "pieces_max": 29.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0426,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 614,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 624,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 560,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 562,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 674,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 586,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 520,
+          "lines_cleared": 0,
+          "pieces": 23,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 636,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 1500,
+      "decisions": 33418,
+      "learn_steps": 32419,
+      "epsilon": 0.05,
+      "train_seconds": 74.907,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 604.75,
+      "score_median": 592.0,
+      "score_max": 864.0,
+      "score_stdev": 133.46776,
+      "lines_mean": 0.125,
+      "lines_max": 1.0,
+      "pieces_mean": 26.0,
+      "pieces_max": 33.0,
+      "lines_per_100_pieces": 0.4808,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0472,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 670,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 568,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 864,
+          "lines_cleared": 1,
+          "pieces": 33,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 432,
+          "lines_cleared": 0,
+          "pieces": 17,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 656,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 474,
+          "lines_cleared": 0,
+          "pieces": 19,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 558,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 616,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 1750,
+      "decisions": 39723,
+      "learn_steps": 38724,
+      "epsilon": 0.05,
+      "train_seconds": 89.824,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 589.0,
+      "score_median": 588.0,
+      "score_max": 640.0,
+      "score_stdev": 46.241602,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 25.25,
+      "pieces_max": 28.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0409,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 582,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 594,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 626,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 636,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 504,
+          "lines_cleared": 0,
+          "pieces": 22,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 552,
+          "lines_cleared": 0,
+          "pieces": 22,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 640,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 578,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 2000,
+      "decisions": 46089,
+      "learn_steps": 45090,
+      "epsilon": 0.05,
+      "train_seconds": 105.049,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 646.75,
+      "score_median": 650.0,
+      "score_max": 694.0,
+      "score_stdev": 41.014806,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 26.875,
+      "pieces_max": 30.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0442,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 672,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 608,
+          "lines_cleared": 0,
+          "pieces": 23,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 628,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 694,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 578,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 694,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 656,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 644,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 2250,
+      "decisions": 52466,
+      "learn_steps": 51467,
+      "epsilon": 0.05,
+      "train_seconds": 120.222,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 639.0,
+      "score_median": 632.0,
+      "score_max": 726.0,
+      "score_stdev": 61.588496,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 27.375,
+      "pieces_max": 30.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0449,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 572,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 636,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 726,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 554,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 608,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 702,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 686,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 628,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 2500,
+      "decisions": 58779,
+      "learn_steps": 57780,
+      "epsilon": 0.05,
+      "train_seconds": 136.05,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 588.25,
+      "score_median": 611.0,
+      "score_max": 688.0,
+      "score_stdev": 103.622598,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 25.625,
+      "pieces_max": 33.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0439,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 634,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 688,
+          "lines_cleared": 0,
+          "pieces": 33,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 688,
+          "lines_cleared": 0,
+          "pieces": 31,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 390,
+          "lines_cleared": 0,
+          "pieces": 16,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 652,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 490,
+          "lines_cleared": 0,
+          "pieces": 21,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 576,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 588,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 2750,
+      "decisions": 65185,
+      "learn_steps": 64186,
+      "epsilon": 0.05,
+      "train_seconds": 151.723,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 613.25,
+      "score_median": 631.0,
+      "score_max": 678.0,
+      "score_stdev": 69.709089,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 26.25,
+      "pieces_max": 32.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0461,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 672,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 674,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 596,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 606,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 512,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 512,
+          "lines_cleared": 0,
+          "pieces": 18,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 656,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 678,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 3000,
+      "decisions": 71551,
+      "learn_steps": 70552,
+      "epsilon": 0.05,
+      "train_seconds": 167.808,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 590.25,
+      "score_median": 585.0,
+      "score_max": 672.0,
+      "score_stdev": 65.852107,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 24.0,
+      "pieces_max": 29.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0467,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 672,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 672,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 558,
+          "lines_cleared": 0,
+          "pieces": 22,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 612,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 532,
+          "lines_cleared": 0,
+          "pieces": 20,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 630,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 550,
+          "lines_cleared": 0,
+          "pieces": 23,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 496,
+          "lines_cleared": 0,
+          "pieces": 19,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 3250,
+      "decisions": 77943,
+      "learn_steps": 76944,
+      "epsilon": 0.05,
+      "train_seconds": 184.242,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 628.25,
+      "score_median": 619.0,
+      "score_max": 722.0,
+      "score_stdev": 63.122896,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 27.125,
+      "pieces_max": 30.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0488,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 722,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 706,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 650,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 592,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 544,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 642,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 574,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 596,
+          "lines_cleared": 0,
+          "pieces": 23,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 3500,
+      "decisions": 84281,
+      "learn_steps": 83282,
+      "epsilon": 0.05,
+      "train_seconds": 201.147,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 599.75,
+      "score_median": 609.0,
+      "score_max": 658.0,
+      "score_stdev": 47.309769,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 25.25,
+      "pieces_max": 29.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0496,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 658,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 510,
+          "lines_cleared": 0,
+          "pieces": 20,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 562,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 584,
+          "lines_cleared": 0,
+          "pieces": 22,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 632,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 618,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 600,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 634,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 3750,
+      "decisions": 90805,
+      "learn_steps": 89806,
+      "epsilon": 0.05,
+      "train_seconds": 219.98,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 638.0,
+      "score_median": 623.0,
+      "score_max": 740.0,
+      "score_stdev": 78.529339,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 26.625,
+      "pieces_max": 32.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0544,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 622,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 588,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 694,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 740,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 624,
+          "lines_cleared": 0,
+          "pieces": 23,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 500,
+          "lines_cleared": 0,
+          "pieces": 20,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 614,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 722,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 4000,
+      "decisions": 97256,
+      "learn_steps": 96257,
+      "epsilon": 0.05,
+      "train_seconds": 239.872,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 650.25,
+      "score_median": 663.0,
+      "score_max": 750.0,
+      "score_stdev": 67.268651,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 27.75,
+      "pieces_max": 32.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0609,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 696,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 692,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 542,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 610,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 656,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 586,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 670,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 750,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 4250,
+      "decisions": 104017,
+      "learn_steps": 103018,
+      "epsilon": 0.05,
+      "train_seconds": 260.28,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 675.5,
+      "score_median": 692.0,
+      "score_max": 782.0,
+      "score_stdev": 89.810912,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 28.25,
+      "pieces_max": 33.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0709,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 714,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 540,
+          "lines_cleared": 0,
+          "pieces": 23,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 774,
+          "lines_cleared": 0,
+          "pieces": 33,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 704,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 556,
+          "lines_cleared": 0,
+          "pieces": 21,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 782,
+          "lines_cleared": 0,
+          "pieces": 33,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 654,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 680,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 4500,
+      "decisions": 110761,
+      "learn_steps": 109762,
+      "epsilon": 0.05,
+      "train_seconds": 280.894,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 619.0,
+      "score_median": 626.0,
+      "score_max": 754.0,
+      "score_stdev": 93.435998,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 26.375,
+      "pieces_max": 32.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0559,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 474,
+          "lines_cleared": 0,
+          "pieces": 20,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 656,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 596,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 670,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 704,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 562,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 754,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 536,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 4750,
+      "decisions": 117294,
+      "learn_steps": 116295,
+      "epsilon": 0.05,
+      "train_seconds": 302.667,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 624.5,
+      "score_median": 672.0,
+      "score_max": 766.0,
+      "score_stdev": 117.933395,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 26.625,
+      "pieces_max": 34.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0971,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 548,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 698,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 688,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 656,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 766,
+          "lines_cleared": 0,
+          "pieces": 34,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 442,
+          "lines_cleared": 0,
+          "pieces": 17,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 484,
+          "lines_cleared": 0,
+          "pieces": 18,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 714,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 5000,
+      "decisions": 123723,
+      "learn_steps": 122724,
+      "epsilon": 0.05,
+      "train_seconds": 329.698,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 690.5,
+      "score_median": 679.0,
+      "score_max": 822.0,
+      "score_stdev": 70.441465,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 28.375,
+      "pieces_max": 35.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.1271,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 678,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 680,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 760,
+          "lines_cleared": 0,
+          "pieces": 31,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 822,
+          "lines_cleared": 0,
+          "pieces": 35,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 686,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 624,
+          "lines_cleared": 0,
+          "pieces": 23,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 670,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 604,
+          "lines_cleared": 0,
+          "pieces": 23,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 5250,
+      "decisions": 130293,
+      "learn_steps": 129294,
+      "epsilon": 0.05,
+      "train_seconds": 374.172,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 615.0,
+      "score_median": 607.0,
+      "score_max": 738.0,
+      "score_stdev": 57.906328,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 26.375,
+      "pieces_max": 32.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0824,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 566,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 622,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 626,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 578,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 640,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 592,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 738,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 558,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 5500,
+      "decisions": 136754,
+      "learn_steps": 135755,
+      "epsilon": 0.05,
+      "train_seconds": 420.126,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 616.0,
+      "score_median": 634.0,
+      "score_max": 812.0,
+      "score_stdev": 133.004833,
+      "lines_mean": 0.125,
+      "lines_max": 1.0,
+      "pieces_mean": 24.625,
+      "pieces_max": 31.0,
+      "lines_per_100_pieces": 0.5076,
+      "games_capped": 0.0,
+      "eval_seconds": 0.1557,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 740,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 648,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 416,
+          "lines_cleared": 0,
+          "pieces": 15,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 674,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 620,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 812,
+          "lines_cleared": 1,
+          "pieces": 31,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 546,
+          "lines_cleared": 0,
+          "pieces": 20,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 472,
+          "lines_cleared": 0,
+          "pieces": 19,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 5750,
+      "decisions": 143238,
+      "learn_steps": 142239,
+      "epsilon": 0.05,
+      "train_seconds": 467.564,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 696.75,
+      "score_median": 723.0,
+      "score_max": 856.0,
+      "score_stdev": 99.161845,
+      "lines_mean": 0.25,
+      "lines_max": 1.0,
+      "pieces_mean": 28.875,
+      "pieces_max": 34.0,
+      "lines_per_100_pieces": 0.8658,
+      "games_capped": 0.0,
+      "eval_seconds": 0.1438,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 562,
+          "lines_cleared": 0,
+          "pieces": 20,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 726,
+          "lines_cleared": 0,
+          "pieces": 31,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 856,
+          "lines_cleared": 1,
+          "pieces": 34,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 732,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 566,
+          "lines_cleared": 0,
+          "pieces": 21,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 758,
+          "lines_cleared": 1,
+          "pieces": 34,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 654,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 720,
+          "lines_cleared": 0,
+          "pieces": 33,
+          "capped": false
+        }
+      ]
+    },
+    {
+      "kind": "evaluation",
+      "experiment": "H",
+      "seed": 4,
+      "episode": 6000,
+      "decisions": 149624,
+      "learn_steps": 148625,
+      "epsilon": 0.05,
+      "train_seconds": 508.21,
+      "games": 8,
+      "max_pieces": 1000,
+      "score_mean": 627.75,
+      "score_median": 641.0,
+      "score_max": 682.0,
+      "score_stdev": 54.567782,
+      "lines_mean": 0.0,
+      "lines_max": 0.0,
+      "pieces_mean": 26.5,
+      "pieces_max": 29.0,
+      "lines_per_100_pieces": 0.0,
+      "games_capped": 0.0,
+      "eval_seconds": 0.0825,
+      "eval_seed": 20260928,
+      "per_game": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 628,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 556,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 676,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 682,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 664,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 626,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 654,
+          "lines_cleared": 0,
+          "pieces": 28,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 536,
+          "lines_cleared": 0,
+          "pieces": 22,
+          "capped": false
+        }
+      ]
+    }
+  ],
+  "best": {
+    "metric": "score_mean",
+    "higher_is_better": true,
+    "best": {
+      "episode": 5750,
+      "metric": "score_mean",
+      "value": 696.75,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/best/best_ep005750_score_mean_696.750.pt",
+      "checkpoint": "best_ep005750_score_mean_696.750.pt",
+      "score_mean": 696.75,
+      "lines_mean": 0.25,
+      "pieces_mean": 28.875,
+      "training_epsilon": 0.050000000000000044,
+      "decisions": 143238,
+      "learn_steps": 142239
+    },
+    "improvements": [
+      {
+        "episode": 0,
+        "metric": "score_mean",
+        "value": 248.75,
+        "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/best/best_ep000000_score_mean_248.750.pt",
+        "checkpoint": "best_ep000000_score_mean_248.750.pt",
+        "score_mean": 248.75,
+        "lines_mean": 0.0,
+        "pieces_mean": 12.375,
+        "training_epsilon": 1.0,
+        "decisions": 0,
+        "learn_steps": 0
+      },
+      {
+        "episode": 250,
+        "metric": "score_mean",
+        "value": 566.75,
+        "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/best/best_ep000250_score_mean_566.750.pt",
+        "checkpoint": "best_ep000250_score_mean_566.750.pt",
+        "score_mean": 566.75,
+        "lines_mean": 0.125,
+        "pieces_mean": 23.375,
+        "training_epsilon": 0.76725,
+        "decisions": 4900,
+        "learn_steps": 3901
+      },
+      {
+        "episode": 750,
+        "metric": "score_mean",
+        "value": 618.5,
+        "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/best/best_ep000750_score_mean_618.500.pt",
+        "checkpoint": "best_ep000750_score_mean_618.500.pt",
+        "score_mean": 618.5,
+        "lines_mean": 0.0,
+        "pieces_mean": 24.625,
+        "training_epsilon": 0.2943875,
+        "decisions": 14855,
+        "learn_steps": 13856
+      },
+      {
+        "episode": 1000,
+        "metric": "score_mean",
+        "value": 693.75,
+        "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/best/best_ep001000_score_mean_693.750.pt",
+        "checkpoint": "best_ep001000_score_mean_693.750.pt",
+        "score_mean": 693.75,
+        "lines_mean": 0.125,
+        "pieces_mean": 29.625,
+        "training_epsilon": 0.050000000000000044,
+        "decisions": 21004,
+        "learn_steps": 20005
+      },
+      {
+        "episode": 5750,
+        "metric": "score_mean",
+        "value": 696.75,
+        "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/best/best_ep005750_score_mean_696.750.pt",
+        "checkpoint": "best_ep005750_score_mean_696.750.pt",
+        "score_mean": 696.75,
+        "lines_mean": 0.25,
+        "pieces_mean": 28.875,
+        "training_epsilon": 0.050000000000000044,
+        "decisions": 143238,
+        "learn_steps": 142239
+      }
+    ],
+    "directory": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/best"
+  },
+  "elapsed_seconds": 508.311347208,
+  "started_at": "2026-09-28T20:36:34.244478+00:00",
+  "finished_at": "2026-09-28T20:45:02.559506+00:00",
+  "metrics_path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/metrics.jsonl",
+  "summary_path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/H/seed4/summary.json"
+}

@@ -1,0 +1,25 @@
+{
+  "episodes": 6000,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "buffer_size": 50000,
+  "gamma": 0.99,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_steps": 20000,
+  "target_update_steps": 500,
+  "min_buffer_size": 1000,
+  "max_pieces": 200,
+  "hidden_sizes": [
+    256,
+    256
+  ],
+  "reward": {
+    "per_piece": 5.0
+  },
+  "seed": 2,
+  "device": "cpu",
+  "checkpoint_every": 1000,
+  "log_every": 200,
+  "label": "I: credit assignment: three-step returns (n=3), so the reward a line clear pays arrives inside the target of the move that started building the row instead of having to travel back through four bootstrapped estimates. Targets the delay between the stack-building placements and the clear they make possible (everything else identical to G)"
+}

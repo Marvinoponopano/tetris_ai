@@ -1,0 +1,55 @@
+{
+  "config": {
+    "episodes": 2000,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "buffer_size": 50000,
+    "gamma": 0.99,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 40000,
+    "target_update_steps": 500,
+    "min_buffer_size": 1000,
+    "max_pieces": 200,
+    "hidden_sizes": [
+      256,
+      256
+    ],
+    "reward": null,
+    "seed": 3,
+    "device": "cpu",
+    "checkpoint_every": 500,
+    "log_every": 100,
+    "label": "B: moderate: enough episodes for the schedule to anneal and the score to have a chance to separate from random"
+  },
+  "config_id": "613707b9cd8c",
+  "description": "dqn 2000 episodes, seed 3, lr 0.001, batch 64, buffer 50,000, gamma 0.99, eps 1->0.05 over 40,000, target every 500, 256x256, cpu",
+  "started_at": "2026-09-28T16:51:33.126501+00:00",
+  "finished_at": "2026-09-28T16:57:17.972565+00:00",
+  "elapsed_seconds": 205.112,
+  "episodes_trained": 2000,
+  "total_decisions": 44133,
+  "total_learn_steps": 43134,
+  "best_score": 1010,
+  "final_epsilon": 0.05,
+  "reward_first_window": -170.2,
+  "reward_last_window": -168.05,
+  "checkpoints": [
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed3/training/checkpoint_500.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed3/training/checkpoint_1000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed3/training/checkpoint_1500.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed3/training/checkpoint_2000.pt"
+  ],
+  "output_dir": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed3/training",
+  "log": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed3/training/train_log.csv",
+  "environment": {
+    "python_version": "3.9.6",
+    "python_implementation": "CPython",
+    "executable": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "numpy": "2.0.2",
+    "pygame": "2.6.1",
+    "torch_version": "2.8.0"
+  }
+}

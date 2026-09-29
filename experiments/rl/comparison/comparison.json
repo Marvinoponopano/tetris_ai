@@ -1,0 +1,903 @@
+{
+  "protocol": {
+    "num_games": 8,
+    "seed": 20260928,
+    "max_pieces": 1000
+  },
+  "primary_baseline": "heuristic",
+  "labels": [
+    "random",
+    "heuristic",
+    "lookahead",
+    "initial RL (C)",
+    "round-1 RL (G)",
+    "improved RL (K)",
+    "combination (M)"
+  ],
+  "agents": {
+    "random": {
+      "label": "random",
+      "agent": "random",
+      "run_id": "20260929T162216704392-be468acaa885",
+      "config_id": "be468acaa885",
+      "stats": {
+        "games": 8,
+        "score_mean": 499.75,
+        "score_median": 511.0,
+        "score_min": 444.0,
+        "score_max": 566.0,
+        "score_stdev": 47.28560638744703,
+        "lines_mean": 0.0,
+        "lines_max": 0.0,
+        "lines_total": 0.0,
+        "pieces_mean": 20.25,
+        "pieces_max": 25.0,
+        "game_length_mean": 20.25,
+        "game_length_max": 25.0,
+        "games_capped": 0.0
+      },
+      "diagnostics": {
+        "boards_scored": 0.0,
+        "decisions": 162.0,
+        "deaths": 8.0,
+        "lines_per_100_pieces": 0.0,
+        "peak_column_mean": 18.125,
+        "peak_column_max": 20.0
+      },
+      "timing": {
+        "elapsed_seconds": 0.01959,
+        "seconds_per_game": 0.002449,
+        "games_per_second": 408.375,
+        "pieces_per_second": 8269.596,
+        "decisions_per_second": 8269.596,
+        "boards_per_second": 0.0,
+        "boards_per_decision": 0.0
+      },
+      "games": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 540,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 510,
+          "lines_cleared": 0,
+          "pieces": 21,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 512,
+          "lines_cleared": 0,
+          "pieces": 19,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 444,
+          "lines_cleared": 0,
+          "pieces": 18,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 530,
+          "lines_cleared": 0,
+          "pieces": 21,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 446,
+          "lines_cleared": 0,
+          "pieces": 17,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 450,
+          "lines_cleared": 0,
+          "pieces": 17,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 566,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        }
+      ],
+      "result_path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/comparison/run-20260929T162216704392-be468acaa885.json",
+      "paired_vs_primary": {
+        "baseline": "heuristic",
+        "games": 8,
+        "score_delta_mean": -929766.5,
+        "score_delta_median": -931550.0,
+        "score_delta_sd": 8109.7415,
+        "score_wins": 0,
+        "score_losses": 8,
+        "score_ties": 0,
+        "sign_test_p": 0.0078125,
+        "lines_delta_mean": -397.625,
+        "pieces_delta_mean": -979.75
+      },
+      "checkpoint_facts": null
+    },
+    "heuristic": {
+      "label": "heuristic",
+      "agent": "heuristic",
+      "run_id": "20260929T162216741740-1a504f718af5",
+      "config_id": "1a504f718af5",
+      "stats": {
+        "games": 8,
+        "score_mean": 930266.25,
+        "score_median": 932028.0,
+        "score_min": 911790.0,
+        "score_max": 938972.0,
+        "score_stdev": 8095.520979441127,
+        "lines_mean": 397.625,
+        "lines_max": 399.0,
+        "lines_total": 3181.0,
+        "pieces_mean": 1000.0,
+        "pieces_max": 1000.0,
+        "game_length_mean": 1000.0,
+        "game_length_max": 1000.0,
+        "games_capped": 8.0
+      },
+      "diagnostics": {
+        "boards_scored": 185073.0,
+        "decisions": 8000.0,
+        "deaths": 0.0,
+        "lines_per_100_pieces": 39.763,
+        "peak_column_mean": 10.875,
+        "peak_column_max": 14.0
+      },
+      "timing": {
+        "elapsed_seconds": 5.936862,
+        "seconds_per_game": 0.742108,
+        "games_per_second": 1.348,
+        "pieces_per_second": 1347.513,
+        "decisions_per_second": 1347.513,
+        "boards_per_second": 31173.539,
+        "boards_per_decision": 23.134
+      },
+      "games": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 911790,
+          "lines_cleared": 398,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 938972,
+          "lines_cleared": 397,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 930952,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 933104,
+          "lines_cleared": 397,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 928892,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 930016,
+          "lines_cleared": 398,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 934472,
+          "lines_cleared": 394,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 933932,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        }
+      ],
+      "result_path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/comparison/run-20260929T162216741740-1a504f718af5.json",
+      "paired_vs_primary": null,
+      "checkpoint_facts": null
+    },
+    "lookahead": {
+      "label": "lookahead",
+      "agent": "heuristic",
+      "run_id": "20260929T162222680689-0bb970f7697e",
+      "config_id": "0bb970f7697e",
+      "stats": {
+        "games": 8,
+        "score_mean": 930025.5,
+        "score_median": 931358.0,
+        "score_min": 908752.0,
+        "score_max": 952524.0,
+        "score_stdev": 13368.609276959216,
+        "lines_mean": 398.625,
+        "lines_max": 399.0,
+        "lines_total": 3189.0,
+        "pieces_mean": 1000.0,
+        "pieces_max": 1000.0,
+        "game_length_mean": 1000.0,
+        "game_length_max": 1000.0,
+        "games_capped": 8.0
+      },
+      "diagnostics": {
+        "boards_scored": 4359117.0,
+        "decisions": 8000.0,
+        "deaths": 0.0,
+        "lines_per_100_pieces": 39.862,
+        "peak_column_mean": 7.125,
+        "peak_column_max": 8.0
+      },
+      "timing": {
+        "elapsed_seconds": 120.595187,
+        "seconds_per_game": 15.074398,
+        "games_per_second": 0.066,
+        "pieces_per_second": 66.338,
+        "decisions_per_second": 66.338,
+        "boards_per_second": 36146.691,
+        "boards_per_decision": 544.89
+      },
+      "games": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 924770,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 932350,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 939188,
+          "lines_cleared": 398,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 934636,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 952524,
+          "lines_cleared": 398,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 908752,
+          "lines_cleared": 398,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 930366,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 917618,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        }
+      ],
+      "result_path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/comparison/run-20260929T162222680689-0bb970f7697e.json",
+      "paired_vs_primary": {
+        "baseline": "heuristic",
+        "games": 8,
+        "score_delta_mean": -240.75,
+        "score_delta_median": -1287.0,
+        "score_delta_sd": 15003.2438,
+        "score_wins": 4,
+        "score_losses": 4,
+        "score_ties": 0,
+        "sign_test_p": 1.0,
+        "lines_delta_mean": 1.0,
+        "pieces_delta_mean": 0.0
+      },
+      "checkpoint_facts": null
+    },
+    "initial RL (C)": {
+      "label": "initial RL (C)",
+      "agent": "dqn",
+      "run_id": "20260929T162423593748-2ff1319262a7",
+      "config_id": "2ff1319262a7",
+      "stats": {
+        "games": 8,
+        "score_mean": 668.25,
+        "score_median": 668.0,
+        "score_min": 574.0,
+        "score_max": 796.0,
+        "score_stdev": 71.90022849159004,
+        "lines_mean": 0.125,
+        "lines_max": 1.0,
+        "lines_total": 1.0,
+        "pieces_mean": 28.0,
+        "pieces_max": 32.0,
+        "game_length_mean": 28.0,
+        "game_length_max": 32.0,
+        "games_capped": 0.0
+      },
+      "diagnostics": {
+        "boards_scored": 224.0,
+        "decisions": 224.0,
+        "deaths": 8.0,
+        "lines_per_100_pieces": 0.446,
+        "peak_column_mean": 19.875,
+        "peak_column_max": 20.0
+      },
+      "timing": {
+        "elapsed_seconds": 0.034662,
+        "seconds_per_game": 0.004333,
+        "games_per_second": 230.8,
+        "pieces_per_second": 6462.408,
+        "decisions_per_second": 6462.408,
+        "boards_per_second": 6462.408,
+        "boards_per_decision": 1.0
+      },
+      "games": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 618,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 642,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 574,
+          "lines_cleared": 0,
+          "pieces": 26,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 796,
+          "lines_cleared": 1,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 606,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 694,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 702,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 714,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        }
+      ],
+      "result_path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/comparison/run-20260929T162423593748-2ff1319262a7.json",
+      "paired_vs_primary": {
+        "baseline": "heuristic",
+        "games": 8,
+        "score_delta_mean": -929598.0,
+        "score_delta_median": -931343.0,
+        "score_delta_sd": 8071.3364,
+        "score_wins": 0,
+        "score_losses": 8,
+        "score_ties": 0,
+        "sign_test_p": 0.0078125,
+        "lines_delta_mean": -397.5,
+        "pieces_delta_mean": -972.0
+      },
+      "checkpoint_facts": {
+        "checkpoint": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/C/seed3/best/best_ep001250_score_mean_668.250.pt",
+        "episode": 1250,
+        "decisions": 24833,
+        "learn_steps": 23834,
+        "seed": 3,
+        "config_id": "e67247222e7c",
+        "best_metric": "score_mean",
+        "best_value": 668.25,
+        "eval_score_mean": 668.25,
+        "eval_lines_mean": 0.125
+      }
+    },
+    "round-1 RL (G)": {
+      "label": "round-1 RL (G)",
+      "agent": "dqn",
+      "run_id": "20260929T162423642413-eea0f6af6e22",
+      "config_id": "eea0f6af6e22",
+      "stats": {
+        "games": 8,
+        "score_mean": 822.5,
+        "score_median": 720.0,
+        "score_min": 632.0,
+        "score_max": 1072.0,
+        "score_stdev": 187.91715499883756,
+        "lines_mean": 0.75,
+        "lines_max": 2.0,
+        "lines_total": 6.0,
+        "pieces_mean": 31.625,
+        "pieces_max": 40.0,
+        "game_length_mean": 31.625,
+        "game_length_max": 40.0,
+        "games_capped": 0.0
+      },
+      "diagnostics": {
+        "boards_scored": 253.0,
+        "decisions": 253.0,
+        "deaths": 8.0,
+        "lines_per_100_pieces": 2.372,
+        "peak_column_mean": 19.875,
+        "peak_column_max": 20.0
+      },
+      "timing": {
+        "elapsed_seconds": 0.039214,
+        "seconds_per_game": 0.004902,
+        "games_per_second": 204.01,
+        "pieces_per_second": 6451.812,
+        "decisions_per_second": 6451.812,
+        "boards_per_second": 6451.812,
+        "boards_per_decision": 1.0
+      },
+      "games": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 1000,
+          "lines_cleared": 2,
+          "pieces": 34,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 632,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 1072,
+          "lines_cleared": 2,
+          "pieces": 40,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 682,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 1064,
+          "lines_cleared": 2,
+          "pieces": 34,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 704,
+          "lines_cleared": 0,
+          "pieces": 31,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 690,
+          "lines_cleared": 0,
+          "pieces": 27,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 736,
+          "lines_cleared": 0,
+          "pieces": 33,
+          "capped": false
+        }
+      ],
+      "result_path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/comparison/run-20260929T162423642413-eea0f6af6e22.json",
+      "paired_vs_primary": {
+        "baseline": "heuristic",
+        "games": 8,
+        "score_delta_mean": -929443.75,
+        "score_delta_median": -931151.0,
+        "score_delta_sd": 8208.8257,
+        "score_wins": 0,
+        "score_losses": 8,
+        "score_ties": 0,
+        "sign_test_p": 0.0078125,
+        "lines_delta_mean": -396.875,
+        "pieces_delta_mean": -968.375
+      },
+      "checkpoint_facts": {
+        "checkpoint": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/G/seed0/best/best_ep003250_score_mean_822.500.pt",
+        "episode": 3250,
+        "decisions": 86606,
+        "learn_steps": 85607,
+        "seed": 0,
+        "config_id": "2d75879d9560",
+        "best_metric": "score_mean",
+        "best_value": 822.5,
+        "eval_score_mean": 822.5,
+        "eval_lines_mean": 0.75
+      }
+    },
+    "improved RL (K)": {
+      "label": "improved RL (K)",
+      "agent": "dueling",
+      "run_id": "20260929T162423693612-95b7d3dec9f8",
+      "config_id": "95b7d3dec9f8",
+      "stats": {
+        "games": 8,
+        "score_mean": 825.5,
+        "score_median": 809.0,
+        "score_min": 666.0,
+        "score_max": 996.0,
+        "score_stdev": 106.51760417883985,
+        "lines_mean": 0.375,
+        "lines_max": 2.0,
+        "lines_total": 3.0,
+        "pieces_mean": 35.375,
+        "pieces_max": 38.0,
+        "game_length_mean": 35.375,
+        "game_length_max": 38.0,
+        "games_capped": 0.0
+      },
+      "diagnostics": {
+        "boards_scored": 283.0,
+        "decisions": 283.0,
+        "deaths": 8.0,
+        "lines_per_100_pieces": 1.06,
+        "peak_column_mean": 20.0,
+        "peak_column_max": 20.0
+      },
+      "timing": {
+        "elapsed_seconds": 0.04508,
+        "seconds_per_game": 0.005635,
+        "games_per_second": 177.464,
+        "pieces_per_second": 6277.781,
+        "decisions_per_second": 6277.781,
+        "boards_per_second": 6277.781,
+        "boards_per_decision": 1.0
+      },
+      "games": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 834,
+          "lines_cleared": 0,
+          "pieces": 34,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 666,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 836,
+          "lines_cleared": 0,
+          "pieces": 38,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 784,
+          "lines_cleared": 0,
+          "pieces": 35,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 952,
+          "lines_cleared": 1,
+          "pieces": 38,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 782,
+          "lines_cleared": 0,
+          "pieces": 36,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 754,
+          "lines_cleared": 0,
+          "pieces": 35,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 996,
+          "lines_cleared": 2,
+          "pieces": 35,
+          "capped": false
+        }
+      ],
+      "result_path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/comparison/run-20260929T162423693612-95b7d3dec9f8.json",
+      "paired_vs_primary": {
+        "baseline": "heuristic",
+        "games": 8,
+        "score_delta_mean": -929440.75,
+        "score_delta_median": -931218.0,
+        "score_delta_sd": 8122.5552,
+        "score_wins": 0,
+        "score_losses": 8,
+        "score_ties": 0,
+        "sign_test_p": 0.0078125,
+        "lines_delta_mean": -397.25,
+        "pieces_delta_mean": -964.625
+      },
+      "checkpoint_facts": {
+        "checkpoint": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/K/seed2/best/best_ep004000_score_mean_825.500.pt",
+        "episode": 4000,
+        "decisions": 111714,
+        "learn_steps": 110715,
+        "seed": 2,
+        "config_id": "93254c6097a7",
+        "best_metric": "score_mean",
+        "best_value": 825.5,
+        "eval_score_mean": 825.5,
+        "eval_lines_mean": 0.375
+      }
+    },
+    "combination (M)": {
+      "label": "combination (M)",
+      "agent": "dueling-feature-planes",
+      "run_id": "20260929T162423748359-36383f7351fb",
+      "config_id": "36383f7351fb",
+      "stats": {
+        "games": 8,
+        "score_mean": 849.75,
+        "score_median": 743.0,
+        "score_min": 672.0,
+        "score_max": 1256.0,
+        "score_stdev": 220.57700307537567,
+        "lines_mean": 0.5,
+        "lines_max": 2.0,
+        "lines_total": 4.0,
+        "pieces_mean": 33.625,
+        "pieces_max": 41.0,
+        "game_length_mean": 33.625,
+        "game_length_max": 41.0,
+        "games_capped": 0.0
+      },
+      "diagnostics": {
+        "boards_scored": 269.0,
+        "decisions": 269.0,
+        "deaths": 8.0,
+        "lines_per_100_pieces": 1.487,
+        "peak_column_mean": 20.0,
+        "peak_column_max": 20.0
+      },
+      "timing": {
+        "elapsed_seconds": 0.045064,
+        "seconds_per_game": 0.005633,
+        "games_per_second": 177.525,
+        "pieces_per_second": 5969.277,
+        "decisions_per_second": 5969.277,
+        "boards_per_second": 5969.277,
+        "boards_per_decision": 1.0
+      },
+      "games": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 704,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 728,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 876,
+          "lines_cleared": 0,
+          "pieces": 38,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 758,
+          "lines_cleared": 0,
+          "pieces": 32,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 1256,
+          "lines_cleared": 2,
+          "pieces": 41,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 686,
+          "lines_cleared": 0,
+          "pieces": 30,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 1118,
+          "lines_cleared": 2,
+          "pieces": 38,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 672,
+          "lines_cleared": 0,
+          "pieces": 29,
+          "capped": false
+        }
+      ],
+      "result_path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/comparison/run-20260929T162423748359-36383f7351fb.json",
+      "paired_vs_primary": {
+        "baseline": "heuristic",
+        "games": 8,
+        "score_delta_mean": -929416.5,
+        "score_delta_median": -931211.0,
+        "score_delta_sd": 8074.6779,
+        "score_wins": 0,
+        "score_losses": 8,
+        "score_ties": 0,
+        "sign_test_p": 0.0078125,
+        "lines_delta_mean": -397.125,
+        "pieces_delta_mean": -966.375
+      },
+      "checkpoint_facts": {
+        "checkpoint": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed1/best/best_ep004500_score_mean_849.750.pt",
+        "episode": 4500,
+        "decisions": 123959,
+        "learn_steps": 122960,
+        "seed": 1,
+        "config_id": "10ac0bd7e33a",
+        "best_metric": "score_mean",
+        "best_value": 849.75,
+        "eval_score_mean": 849.75,
+        "eval_lines_mean": 0.5
+      }
+    }
+  },
+  "table": "                 agent  games   score mean        sd    median       max  lines mean  lines max  lines/100   pieces  pieces max    d_score     wins       p\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n                random      8        499.8      47.3       511       566        0.00          0       0.00     20.2          25 -929,766.5      0/8   0.008\n             heuristic      8    930,266.2   8,095.5   932,028   938,972      397.62        399      39.76  1,000.0       1,000        0.0        -       -\n             lookahead      8    930,025.5  13,368.6   931,358   952,524      398.62        399      39.86  1,000.0       1,000     -240.8      4/4   1.000\n        initial RL (C)      8        668.2      71.9       668       796        0.12          1       0.45     28.0          32 -929,598.0      0/8   0.008\n        round-1 RL (G)      8        822.5     187.9       720     1,072        0.75          2       2.37     31.6          40 -929,443.8      0/8   0.008\n       improved RL (K)      8        825.5     106.5       809       996        0.38          2       1.06     35.4          38 -929,440.8      0/8   0.008\n       combination (M)      8        849.8     220.6       743     1,256        0.50          2       1.49     33.6          41 -929,416.5      0/8   0.008\nscore/lines/pieces: mean, median, max over the games; lines/100 = lines per 100 pieces (efficiency, so a long game cannot inflate it);\nd_score = mean per-game score difference against the primary baseline (same piece sequences); wins/losses = games won/lost on score; p = two-sided sign test",
+  "experiment_table": "     agent  games  seed    cap   score mean     median          max lines mean lines max  pieces  games/s    secs\n-----------------------------------------------------------------------------------------------------------------\n    random      8 20260928   1000        499.8        511          566       0.00         0    20.2   408.38     0.0\n heuristic      8 20260928   1000    930,266.2    932,028      938,972     397.62       399 1,000.0     1.35     5.9\n heuristic      8 20260928   1000    930,025.5    931,358      952,524     398.62       399 1,000.0     0.07   120.6\n       dqn      8 20260928   1000        668.2        668          796       0.12         1    28.0   230.80     0.0\n       dqn      8 20260928   1000        822.5        720        1,072       0.75         2    31.6   204.01     0.0\n   dueling      8 20260928   1000        825.5        809          996       0.38         2    35.4   177.46     0.0\ndueling-fe      8 20260928   1000        849.8        743        1,256       0.50         2    33.6   177.53     0.0",
+  "environment": {
+    "python_version": "3.9.6",
+    "python_implementation": "CPython",
+    "executable": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "numpy": "2.0.2",
+    "pygame": "2.6.1"
+  },
+  "written_at": "2026-09-29T16:24:23.798196+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "episodes": 2000,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "buffer_size": 50000,
+  "gamma": 0.99,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_steps": 40000,
+  "target_update_steps": 500,
+  "min_buffer_size": 1000,
+  "max_pieces": 200,
+  "hidden_sizes": [
+    256,
+    256
+  ],
+  "reward": null,
+  "seed": 1,
+  "device": "cpu",
+  "checkpoint_every": 500,
+  "log_every": 100,
+  "label": "B: moderate: enough episodes for the schedule to anneal and the score to have a chance to separate from random"
+}

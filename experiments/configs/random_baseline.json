@@ -1,0 +1,7 @@
+{
+  "agent": "random",
+  "num_games": 100,
+  "seed": 123,
+  "max_pieces": 1000,
+  "label": "random, the floor to beat"
+}

@@ -1,0 +1,12 @@
+{
+  "agent": "heuristic",
+  "num_games": 30,
+  "seed": 123,
+  "max_pieces": 400,
+  "lookahead_depth": 0,
+  "weights": {
+    "holes": -12.0,
+    "bumpiness": -1.5
+  },
+  "label": "hole-averse weights"
+}

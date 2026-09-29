@@ -1,0 +1,25 @@
+{
+  "episodes": 6000,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "buffer_size": 50000,
+  "gamma": 0.99,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_steps": 20000,
+  "target_update_steps": 500,
+  "min_buffer_size": 1000,
+  "max_pieces": 200,
+  "hidden_sizes": [
+    256,
+    256
+  ],
+  "reward": {
+    "per_piece": 5.0
+  },
+  "seed": 2,
+  "device": "cpu",
+  "checkpoint_every": 1000,
+  "log_every": 200,
+  "label": "N: lookahead: show the network the piece after next (queue[1], which the encoding has always thrown away). Read this arm against J, not against G: it is the five feature planes plus one queue plane, so the difference is exactly the queue. If planning for a piece two moves away is what the agent lacks, this is where it shows; the reward, schedule, head, buffer and episodes are G's/J's"
+}

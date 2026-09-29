@@ -1,0 +1,59 @@
+{
+  "config": {
+    "episodes": 6000,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "buffer_size": 50000,
+    "gamma": 0.99,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 20000,
+    "target_update_steps": 500,
+    "min_buffer_size": 1000,
+    "max_pieces": 200,
+    "hidden_sizes": [
+      256,
+      256
+    ],
+    "reward": {
+      "per_piece": 5.0
+    },
+    "seed": 4,
+    "device": "cpu",
+    "checkpoint_every": 1000,
+    "log_every": 200,
+    "label": "K: architecture: dueling head (Q = V + A - mean A), because the diagnosis measured a mean best Q of 3.63 against only 1.61 between best and second-best -- most of the value is the position, not the placement, and 40 output copies of it is what the reference net has (everything else identical to G)"
+  },
+  "config_id": "417efd4479e6",
+  "description": "dqn 6000 episodes, seed 4, lr 0.001, batch 64, buffer 50,000, gamma 0.99, eps 1->0.05 over 20,000, target every 500, 256x256, cpu, [per_piece=5]",
+  "started_at": "2026-09-28T21:05:23.273378+00:00",
+  "finished_at": "2026-09-29T00:40:46.041993+00:00",
+  "elapsed_seconds": 1084.875,
+  "episodes_trained": 6000,
+  "total_decisions": 171367,
+  "total_learn_steps": 170368,
+  "best_score": 1290,
+  "final_epsilon": 0.05,
+  "reward_first_window": -80.15,
+  "reward_last_window": -30.2,
+  "checkpoints": [
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/K/seed4/training/checkpoint_1000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/K/seed4/training/checkpoint_2000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/K/seed4/training/checkpoint_3000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/K/seed4/training/checkpoint_4000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/K/seed4/training/checkpoint_5000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/K/seed4/training/checkpoint_6000.pt"
+  ],
+  "output_dir": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/K/seed4/training",
+  "log": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/K/seed4/training/train_log.csv",
+  "environment": {
+    "python_version": "3.9.6",
+    "python_implementation": "CPython",
+    "executable": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "numpy": "2.0.2",
+    "pygame": "2.6.1",
+    "torch_version": "2.8.0"
+  }
+}

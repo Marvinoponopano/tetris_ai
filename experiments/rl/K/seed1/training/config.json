@@ -1,0 +1,25 @@
+{
+  "episodes": 6000,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "buffer_size": 50000,
+  "gamma": 0.99,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_steps": 20000,
+  "target_update_steps": 500,
+  "min_buffer_size": 1000,
+  "max_pieces": 200,
+  "hidden_sizes": [
+    256,
+    256
+  ],
+  "reward": {
+    "per_piece": 5.0
+  },
+  "seed": 1,
+  "device": "cpu",
+  "checkpoint_every": 1000,
+  "log_every": 200,
+  "label": "K: architecture: dueling head (Q = V + A - mean A), because the diagnosis measured a mean best Q of 3.63 against only 1.61 between best and second-best -- most of the value is the position, not the placement, and 40 output copies of it is what the reference net has (everything else identical to G)"
+}

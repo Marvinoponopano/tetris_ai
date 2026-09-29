@@ -1,0 +1,18 @@
+[
+  {
+    "agent": "heuristic",
+    "num_games": 10,
+    "seed": 1,
+    "max_pieces": 200,
+    "lookahead_depth": 1,
+    "label": "depth 1, seed 1"
+  },
+  {
+    "agent": "heuristic",
+    "num_games": 10,
+    "seed": 2,
+    "max_pieces": 200,
+    "lookahead_depth": 1,
+    "label": "depth 1, seed 2"
+  }
+]

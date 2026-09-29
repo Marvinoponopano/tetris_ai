@@ -1,0 +1,6 @@
+# Dependencies for the pygame window frontend (play.py).
+#
+# The engine, the tests and the terminal demo (main.py) do NOT need these --
+# `play.py --mode train` and `play.py --mode viz` are meant to run without a
+# display at all, so this stays a separate file from requirements.txt.
+pygame>=2.1

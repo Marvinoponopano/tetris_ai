@@ -1,0 +1,375 @@
+{
+  "protocol": {
+    "num_games": 8,
+    "seed": 20260928,
+    "max_pieces": 1000
+  },
+  "primary_baseline": "random",
+  "labels": [
+    "random",
+    "heuristic",
+    "lookahead"
+  ],
+  "agents": {
+    "random": {
+      "label": "random",
+      "agent": "random",
+      "run_id": "20260928T171418758301-be468acaa885",
+      "config_id": "be468acaa885",
+      "stats": {
+        "games": 8,
+        "score_mean": 499.75,
+        "score_median": 511.0,
+        "score_min": 444.0,
+        "score_max": 566.0,
+        "score_stdev": 47.28560638744703,
+        "lines_mean": 0.0,
+        "lines_max": 0.0,
+        "lines_total": 0.0,
+        "pieces_mean": 20.25,
+        "pieces_max": 25.0,
+        "game_length_mean": 20.25,
+        "game_length_max": 25.0,
+        "games_capped": 0.0
+      },
+      "diagnostics": {
+        "boards_scored": 0.0,
+        "decisions": 162.0,
+        "deaths": 8.0,
+        "lines_per_100_pieces": 0.0,
+        "peak_column_mean": 18.125,
+        "peak_column_max": 20.0
+      },
+      "timing": {
+        "elapsed_seconds": 0.069774,
+        "seconds_per_game": 0.008722,
+        "games_per_second": 114.655,
+        "pieces_per_second": 2321.769,
+        "decisions_per_second": 2321.769,
+        "boards_per_second": 0.0,
+        "boards_per_decision": 0.0
+      },
+      "games": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 540,
+          "lines_cleared": 0,
+          "pieces": 25,
+          "capped": false
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 510,
+          "lines_cleared": 0,
+          "pieces": 21,
+          "capped": false
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 512,
+          "lines_cleared": 0,
+          "pieces": 19,
+          "capped": false
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 444,
+          "lines_cleared": 0,
+          "pieces": 18,
+          "capped": false
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 530,
+          "lines_cleared": 0,
+          "pieces": 21,
+          "capped": false
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 446,
+          "lines_cleared": 0,
+          "pieces": 17,
+          "capped": false
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 450,
+          "lines_cleared": 0,
+          "pieces": 17,
+          "capped": false
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 566,
+          "lines_cleared": 0,
+          "pieces": 24,
+          "capped": false
+        }
+      ],
+      "result_path": "experiments/rl/baselines/run-20260928T171418758301-be468acaa885.json",
+      "paired_vs_primary": null,
+      "checkpoint_facts": null
+    },
+    "heuristic": {
+      "label": "heuristic",
+      "agent": "heuristic",
+      "run_id": "20260928T171418914233-1a504f718af5",
+      "config_id": "1a504f718af5",
+      "stats": {
+        "games": 8,
+        "score_mean": 930266.25,
+        "score_median": 932028.0,
+        "score_min": 911790.0,
+        "score_max": 938972.0,
+        "score_stdev": 8095.520979441127,
+        "lines_mean": 397.625,
+        "lines_max": 399.0,
+        "lines_total": 3181.0,
+        "pieces_mean": 1000.0,
+        "pieces_max": 1000.0,
+        "game_length_mean": 1000.0,
+        "game_length_max": 1000.0,
+        "games_capped": 8.0
+      },
+      "diagnostics": {
+        "boards_scored": 185073.0,
+        "decisions": 8000.0,
+        "deaths": 0.0,
+        "lines_per_100_pieces": 39.763,
+        "peak_column_mean": 10.875,
+        "peak_column_max": 14.0
+      },
+      "timing": {
+        "elapsed_seconds": 23.060564,
+        "seconds_per_game": 2.882571,
+        "games_per_second": 0.347,
+        "pieces_per_second": 346.913,
+        "decisions_per_second": 346.913,
+        "boards_per_second": 8025.519,
+        "boards_per_decision": 23.134
+      },
+      "games": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 911790,
+          "lines_cleared": 398,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 938972,
+          "lines_cleared": 397,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 930952,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 933104,
+          "lines_cleared": 397,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 928892,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 930016,
+          "lines_cleared": 398,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 934472,
+          "lines_cleared": 394,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 933932,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        }
+      ],
+      "result_path": "experiments/rl/baselines/run-20260928T171418914233-1a504f718af5.json",
+      "paired_vs_primary": {
+        "baseline": "random",
+        "games": 8,
+        "score_delta_mean": 929766.5,
+        "score_delta_median": 931550.0,
+        "score_delta_sd": 8109.7415,
+        "score_wins": 8,
+        "score_losses": 0,
+        "score_ties": 0,
+        "sign_test_p": 0.0078125,
+        "lines_delta_mean": 397.625,
+        "pieces_delta_mean": 979.75
+      },
+      "checkpoint_facts": null
+    },
+    "lookahead": {
+      "label": "lookahead",
+      "agent": "heuristic",
+      "run_id": "20260928T171441984428-0bb970f7697e",
+      "config_id": "0bb970f7697e",
+      "stats": {
+        "games": 8,
+        "score_mean": 930025.5,
+        "score_median": 931358.0,
+        "score_min": 908752.0,
+        "score_max": 952524.0,
+        "score_stdev": 13368.609276959216,
+        "lines_mean": 398.625,
+        "lines_max": 399.0,
+        "lines_total": 3189.0,
+        "pieces_mean": 1000.0,
+        "pieces_max": 1000.0,
+        "game_length_mean": 1000.0,
+        "game_length_max": 1000.0,
+        "games_capped": 8.0
+      },
+      "diagnostics": {
+        "boards_scored": 4359117.0,
+        "decisions": 8000.0,
+        "deaths": 0.0,
+        "lines_per_100_pieces": 39.862,
+        "peak_column_mean": 7.125,
+        "peak_column_max": 8.0
+      },
+      "timing": {
+        "elapsed_seconds": 423.853797,
+        "seconds_per_game": 52.981725,
+        "games_per_second": 0.019,
+        "pieces_per_second": 18.874,
+        "decisions_per_second": 18.874,
+        "boards_per_second": 10284.483,
+        "boards_per_decision": 544.89
+      },
+      "games": [
+        {
+          "game": 0,
+          "seed": 20260928,
+          "score": 924770,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 1,
+          "seed": 20260929,
+          "score": 932350,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 2,
+          "seed": 20260930,
+          "score": 939188,
+          "lines_cleared": 398,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 3,
+          "seed": 20260931,
+          "score": 934636,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 4,
+          "seed": 20260932,
+          "score": 952524,
+          "lines_cleared": 398,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 5,
+          "seed": 20260933,
+          "score": 908752,
+          "lines_cleared": 398,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 6,
+          "seed": 20260934,
+          "score": 930366,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        },
+        {
+          "game": 7,
+          "seed": 20260935,
+          "score": 917618,
+          "lines_cleared": 399,
+          "pieces": 1000,
+          "capped": true
+        }
+      ],
+      "result_path": "experiments/rl/baselines/run-20260928T171441984428-0bb970f7697e.json",
+      "paired_vs_primary": {
+        "baseline": "random",
+        "games": 8,
+        "score_delta_mean": 929525.75,
+        "score_delta_median": 930878.0,
+        "score_delta_sd": 13361.7175,
+        "score_wins": 8,
+        "score_losses": 0,
+        "score_ties": 0,
+        "sign_test_p": 0.0078125,
+        "lines_delta_mean": 398.625,
+        "pieces_delta_mean": 979.75
+      },
+      "checkpoint_facts": null
+    }
+  },
+  "table": "                 agent  games   score mean         sd     median  lines mean  lines/100   pieces    d_score     wins       p\n----------------------------------------------------------------------------------------------------------------------------\n                random      8        499.8       47.3        511        0.00       0.00     20.2        0.0        -       -\n             heuristic      8    930,266.2    8,095.5    932,028      397.62      39.76  1,000.0  929,766.5      8/0   0.008\n             lookahead      8    930,025.5   13,368.6    931,358      398.62      39.86  1,000.0  929,525.8      8/0   0.008\nd_score = mean per-game score difference against the primary baseline (same piece sequences); wins/losses = games won/lost on score; p = two-sided sign test",
+  "experiment_table": "     agent  games  seed    cap   score mean     median          max lines mean lines max  pieces  games/s    secs\n-----------------------------------------------------------------------------------------------------------------\n    random      8 20260928   1000        499.8        511          566       0.00         0    20.2   114.66     0.1\n heuristic      8 20260928   1000    930,266.2    932,028      938,972     397.62       399 1,000.0     0.35    23.1\n heuristic      8 20260928   1000    930,025.5    931,358      952,524     398.62       399 1,000.0     0.02   423.9",
+  "environment": {
+    "python_version": "3.9.6",
+    "python_implementation": "CPython",
+    "executable": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "numpy": "2.0.2",
+    "pygame": "2.6.1"
+  },
+  "written_at": "2026-09-28T17:22:38.971116+00:00"
+}

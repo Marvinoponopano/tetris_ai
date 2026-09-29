@@ -1,0 +1,59 @@
+{
+  "config": {
+    "episodes": 6000,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "buffer_size": 50000,
+    "gamma": 0.99,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 20000,
+    "target_update_steps": 500,
+    "min_buffer_size": 1000,
+    "max_pieces": 200,
+    "hidden_sizes": [
+      256,
+      256
+    ],
+    "reward": {
+      "per_piece": 5.0
+    },
+    "seed": 4,
+    "device": "cpu",
+    "checkpoint_every": 1000,
+    "log_every": 200,
+    "label": "M: the combination, and the only arm allowed two changes: dueling (the one arm of the five that improved the agent: +31.5 mean score, 4/5 seeds) with the five-plane encoding (the one that made the heuristic's ranking easier to learn: 45.0% supervised agreement against 32.7% on three planes). They attack different halves -- what the value is worth, and what the network can see -- so this arm is the honest test of whether the round-2 gains add up or overlap.\n\nPredicts: at or above K. If it lands at K's level the two do overlap; if it lands above, they compose."
+  },
+  "config_id": "417efd4479e6",
+  "description": "dqn 6000 episodes, seed 4, lr 0.001, batch 64, buffer 50,000, gamma 0.99, eps 1->0.05 over 20,000, target every 500, 256x256, cpu, [per_piece=5]",
+  "started_at": "2026-09-29T15:56:25.876743+00:00",
+  "finished_at": "2026-09-29T16:07:16.226739+00:00",
+  "elapsed_seconds": 650.358,
+  "episodes_trained": 6000,
+  "total_decisions": 167332,
+  "total_learn_steps": 166333,
+  "best_score": 1166,
+  "final_epsilon": 0.05,
+  "reward_first_window": -80.15,
+  "reward_last_window": -29.7,
+  "checkpoints": [
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/training/checkpoint_1000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/training/checkpoint_2000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/training/checkpoint_3000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/training/checkpoint_4000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/training/checkpoint_5000.pt",
+    "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/training/checkpoint_6000.pt"
+  ],
+  "output_dir": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/training",
+  "log": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/training/train_log.csv",
+  "environment": {
+    "python_version": "3.9.6",
+    "python_implementation": "CPython",
+    "executable": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "numpy": "2.0.2",
+    "pygame": "2.6.1",
+    "torch_version": "2.8.0"
+  }
+}

@@ -1,0 +1,26 @@
+# Virtualenvs and tooling -- never committed (501 MB, absolute paths, no value).
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.DS_Store
+
+# Training weights -- 882 files / 3.4 GB, all regenerable by re-running the
+# campaigns (`rl_experiments.py run --experiment <arm>`). Git is a bad home for
+# half-gigabyte binary history, so they stay out...
+experiments/**/*.pt
+# ...except the two checkpoints the documentation actually points at, so that a
+# fresh clone can run the viewer immediately:
+#   checkpoints/best.pt -> K/seed2 (the improved agent)
+#   G/seed0       (the round-one winner, kept for the round-1 vs round-2 compare)
+!experiments/rl/K/seed2/best/best_ep004000_score_mean_825.500.pt
+!experiments/rl/G/seed0/best/best_ep003250_score_mean_822.500.pt
+
+# Local throwaway recordings and screenshots.
+/recordings/
+*.mp4
+# ...except the demo videos the README embeds.
+!experiments/rl/demo/*.mp4

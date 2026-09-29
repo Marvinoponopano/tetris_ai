@@ -1,0 +1,175 @@
+{
+  "label": "best_ep001100_score_mean_669.000",
+  "checkpoint": "experiments/rl/B/seed1/best/best_ep001100_score_mean_669.000.pt",
+  "episode": 1100,
+  "decisions": 68,
+  "agent_decisions": 23050,
+  "learn_steps": 22051,
+  "games": 3,
+  "seed": 20260928,
+  "max_pieces": 200,
+  "config": {
+    "episodes": 2000,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "buffer_size": 50000,
+    "gamma": 0.99,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 40000,
+    "target_update_steps": 500,
+    "min_buffer_size": 1000,
+    "max_pieces": 200,
+    "hidden_sizes": [
+      256,
+      256
+    ],
+    "reward": null,
+    "seed": 1,
+    "device": "cpu",
+    "checkpoint_every": 500,
+    "log_every": 100,
+    "label": "B: moderate: enough episodes for the schedule to anneal and the score to have a chance to separate from random"
+  },
+  "reward": {
+    "episode_mean": -154.83333333333334,
+    "episode_sd": 12.002314591592555,
+    "components": {
+      "per_line": 0.0,
+      "hole": -135.0,
+      "height": -29.5,
+      "game_over": -300.0
+    },
+    "shares": {
+      "per_line": -0.0,
+      "hole": 0.290635,
+      "height": 0.063509,
+      "game_over": 0.645856
+    },
+    "per_step_mean": -6.830882352941177
+  },
+  "survival": {
+    "pieces_mean": 22.666666666666668,
+    "pieces_max": 25.0,
+    "deaths": 3,
+    "lines_total": 0,
+    "lines_mean": 0.0,
+    "lines_per_100_pieces": 0.0,
+    "episodes_with_a_line_clear": 0,
+    "peak_column_mean": 12.823529411764707,
+    "peak_column_max": 20.0
+  },
+  "actions": {
+    "distinct_actions": 17,
+    "top_action": 10,
+    "top_action_rotation": 1,
+    "top_action_column": 0,
+    "top_action_share": 0.16176470588235295,
+    "entropy_bits": 3.7494231234282935,
+    "illegal_selections": 0,
+    "rotation_counts": [
+      27,
+      33,
+      0,
+      8
+    ],
+    "column_counts": [
+      14,
+      5,
+      4,
+      9,
+      6,
+      8,
+      6,
+      10,
+      6,
+      0
+    ],
+    "counts": [
+      3,
+      1,
+      1,
+      0,
+      6,
+      6,
+      4,
+      6,
+      0,
+      0,
+      11,
+      4,
+      3,
+      9,
+      0,
+      0,
+      2,
+      3,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      1,
+      5,
+      0
+    ]
+  },
+  "q_values": {
+    "best_mean": 4.415253875886693,
+    "best_min": -76.91270446777344,
+    "best_max": 110.01769256591797,
+    "spread_mean": 2.3782787594725106,
+    "spread_sd": 2.7338711170454566,
+    "tied_decisions": 0
+  },
+  "heuristic": {
+    "agreement_depth0": 0.029411764705882353,
+    "agreement_chance": 0.05353710111495578,
+    "regret_mean": 20.651515151515152,
+    "regret_share_mean": 0.16680309855283132,
+    "q_score_correlation": 0.3038597796132986,
+    "suicidal_choices": 2,
+    "forced_deaths": 0,
+    "lookahead_decisions": 20,
+    "agreement_depth1": 0.05
+  },
+  "state": {
+    "plane_sums_mean": [
+      43.0588,
+      4.0,
+      4.0
+    ],
+    "states_without_a_piece": 0,
+    "empty_masks": 0,
+    "states": 68
+  },
+  "exploration": {
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 40000,
+    "epsilon_at_checkpoint": 0.4525625,
+    "schedule": {
+      "0": 1.0,
+      "1000": 0.97625,
+      "5000": 0.88125,
+      "10000": 0.7625,
+      "25000": 0.40625,
+      "50000": 0.05,
+      "100000": 0.05
+    }
+  }
+}

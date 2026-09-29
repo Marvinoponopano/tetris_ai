@@ -1,0 +1,8 @@
+{
+  "agent": "heuristic",
+  "num_games": 30,
+  "seed": 123,
+  "max_pieces": 400,
+  "lookahead_depth": 0,
+  "label": "greedy: this piece only"
+}

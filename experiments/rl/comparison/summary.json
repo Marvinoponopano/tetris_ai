@@ -1,0 +1,202 @@
+{
+  "agents": {
+    "DQN A": {
+      "diagnostics": {
+        "lines_per_100_pieces": 0.1826
+      },
+      "paired_vs_primary": {
+        "score_losses": 40,
+        "score_wins": 0
+      },
+      "score_sd_across_seeds": 50.43535466317254,
+      "seeds": 5,
+      "stats": {
+        "games": 40,
+        "pieces_mean": 25.0,
+        "score_mean": 595.5,
+        "score_median": 597.6,
+        "score_stdev": 60.902603648581575
+      }
+    },
+    "DQN B": {
+      "diagnostics": {
+        "lines_per_100_pieces": 0.47040000000000004
+      },
+      "paired_vs_primary": {
+        "score_losses": 40,
+        "score_wins": 0
+      },
+      "score_sd_across_seeds": 15.73959974078121,
+      "seeds": 5,
+      "stats": {
+        "games": 40,
+        "pieces_mean": 26.775,
+        "score_mean": 642.45,
+        "score_median": 619.6,
+        "score_stdev": 86.22382449823752
+      }
+    },
+    "DQN C": {
+      "diagnostics": {
+        "lines_per_100_pieces": 0.2826
+      },
+      "paired_vs_primary": {
+        "score_losses": 40,
+        "score_wins": 0
+      },
+      "score_sd_across_seeds": 22.195382402653035,
+      "seeds": 5,
+      "stats": {
+        "games": 40,
+        "pieces_mean": 26.825,
+        "score_mean": 629.95,
+        "score_median": 626.8,
+        "score_stdev": 79.25258187510427
+      }
+    },
+    "DQN D": {
+      "diagnostics": {
+        "lines_per_100_pieces": 0.0926
+      },
+      "paired_vs_primary": {
+        "score_losses": 40,
+        "score_wins": 0
+      },
+      "score_sd_across_seeds": 35.827154506044714,
+      "seeds": 5,
+      "stats": {
+        "games": 40,
+        "pieces_mean": 25.45,
+        "score_mean": 615.8,
+        "score_median": 616.2,
+        "score_stdev": 71.32744005344264
+      }
+    },
+    "DQN E": {
+      "diagnostics": {
+        "lines_per_100_pieces": 0.4568
+      },
+      "paired_vs_primary": {
+        "score_losses": 40,
+        "score_wins": 0
+      },
+      "score_sd_across_seeds": 10.884622179938079,
+      "seeds": 5,
+      "stats": {
+        "games": 40,
+        "pieces_mean": 27.375,
+        "score_mean": 647.25,
+        "score_median": 639.4,
+        "score_stdev": 111.64430688897366
+      }
+    },
+    "DQN F": {
+      "diagnostics": {
+        "lines_per_100_pieces": 0.3746
+      },
+      "paired_vs_primary": {
+        "score_losses": 40,
+        "score_wins": 0
+      },
+      "score_sd_across_seeds": 38.10695474582035,
+      "seeds": 5,
+      "stats": {
+        "games": 40,
+        "pieces_mean": 26.025,
+        "score_mean": 657.85,
+        "score_median": 649.4,
+        "score_stdev": 114.30181800693417
+      }
+    },
+    "DQN G": {
+      "diagnostics": {
+        "lines_per_100_pieces": 1.1703999999999999
+      },
+      "paired_vs_primary": {
+        "score_losses": 40,
+        "score_wins": 0
+      },
+      "score_sd_across_seeds": 35.14541221838208,
+      "seeds": 5,
+      "stats": {
+        "games": 40,
+        "pieces_mean": 32.125,
+        "score_mean": 767.25,
+        "score_median": 728.0,
+        "score_stdev": 118.83469901542222
+      }
+    },
+    "heuristic (d0)": {
+      "diagnostics": {
+        "lines_per_100_pieces": 39.763
+      },
+      "paired_vs_primary": {
+        "score_losses": 0,
+        "score_wins": 0
+      },
+      "score_sd_across_seeds": 0.0,
+      "seeds": 1,
+      "stats": {
+        "games": 8,
+        "pieces_mean": 1000.0,
+        "score_mean": 930266.25,
+        "score_median": 932028.0,
+        "score_stdev": 8095.520979441127
+      }
+    },
+    "lookahead (d1)": {
+      "diagnostics": {
+        "lines_per_100_pieces": 39.862
+      },
+      "paired_vs_primary": {
+        "score_losses": 4,
+        "score_wins": 4
+      },
+      "score_sd_across_seeds": 0.0,
+      "seeds": 1,
+      "stats": {
+        "games": 8,
+        "pieces_mean": 1000.0,
+        "score_mean": 930025.5,
+        "score_median": 931358.0,
+        "score_stdev": 13368.609276959216
+      }
+    },
+    "random": {
+      "diagnostics": {
+        "lines_per_100_pieces": 0.0
+      },
+      "paired_vs_primary": {
+        "score_losses": 8,
+        "score_wins": 0
+      },
+      "score_sd_across_seeds": 0.0,
+      "seeds": 1,
+      "stats": {
+        "games": 8,
+        "pieces_mean": 20.25,
+        "score_mean": 499.75,
+        "score_median": 511.0,
+        "score_stdev": 47.28560638744703
+      }
+    }
+  },
+  "labels": [
+    "random",
+    "heuristic (d0)",
+    "lookahead (d1)",
+    "DQN A",
+    "DQN B",
+    "DQN C",
+    "DQN D",
+    "DQN E",
+    "DQN F",
+    "DQN G"
+  ],
+  "primary_baseline": "heuristic",
+  "protocol": {
+    "max_pieces": 1000,
+    "num_games": 8,
+    "seed": 20260928
+  }
+}

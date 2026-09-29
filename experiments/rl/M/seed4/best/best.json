@@ -1,0 +1,123 @@
+{
+  "metric": "score_mean",
+  "higher_is_better": true,
+  "best": {
+    "episode": 4000,
+    "metric": "score_mean",
+    "value": 766.5,
+    "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/best/best_ep004000_score_mean_766.500.pt",
+    "checkpoint": "best_ep004000_score_mean_766.500.pt",
+    "score_mean": 766.5,
+    "lines_mean": 0.25,
+    "pieces_mean": 32.0,
+    "training_epsilon": 0.050000000000000044,
+    "decisions": 109740,
+    "learn_steps": 108741
+  },
+  "improvements": [
+    {
+      "episode": 0,
+      "metric": "score_mean",
+      "value": 248.75,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/best/best_ep000000_score_mean_248.750.pt",
+      "checkpoint": "best_ep000000_score_mean_248.750.pt",
+      "score_mean": 248.75,
+      "lines_mean": 0.0,
+      "pieces_mean": 12.375,
+      "training_epsilon": 1.0,
+      "decisions": 0,
+      "learn_steps": 0
+    },
+    {
+      "episode": 250,
+      "metric": "score_mean",
+      "value": 540.0,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/best/best_ep000250_score_mean_540.000.pt",
+      "checkpoint": "best_ep000250_score_mean_540.000.pt",
+      "score_mean": 540.0,
+      "lines_mean": 0.0,
+      "pieces_mean": 23.5,
+      "training_epsilon": 0.7609325,
+      "decisions": 5033,
+      "learn_steps": 4034
+    },
+    {
+      "episode": 500,
+      "metric": "score_mean",
+      "value": 625.0,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/best/best_ep000500_score_mean_625.000.pt",
+      "checkpoint": "best_ep000500_score_mean_625.000.pt",
+      "score_mean": 625.0,
+      "lines_mean": 0.0,
+      "pieces_mean": 26.25,
+      "training_epsilon": 0.5097525,
+      "decisions": 10321,
+      "learn_steps": 9322
+    },
+    {
+      "episode": 750,
+      "metric": "score_mean",
+      "value": 636.25,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/best/best_ep000750_score_mean_636.250.pt",
+      "checkpoint": "best_ep000750_score_mean_636.250.pt",
+      "score_mean": 636.25,
+      "lines_mean": 0.125,
+      "pieces_mean": 25.875,
+      "training_epsilon": 0.22442000000000006,
+      "decisions": 16328,
+      "learn_steps": 15329
+    },
+    {
+      "episode": 1250,
+      "metric": "score_mean",
+      "value": 689.25,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/best/best_ep001250_score_mean_689.250.pt",
+      "checkpoint": "best_ep001250_score_mean_689.250.pt",
+      "score_mean": 689.25,
+      "lines_mean": 0.25,
+      "pieces_mean": 29.125,
+      "training_epsilon": 0.050000000000000044,
+      "decisions": 29776,
+      "learn_steps": 28777
+    },
+    {
+      "episode": 1500,
+      "metric": "score_mean",
+      "value": 708.25,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/best/best_ep001500_score_mean_708.250.pt",
+      "checkpoint": "best_ep001500_score_mean_708.250.pt",
+      "score_mean": 708.25,
+      "lines_mean": 0.125,
+      "pieces_mean": 30.125,
+      "training_epsilon": 0.050000000000000044,
+      "decisions": 36764,
+      "learn_steps": 35765
+    },
+    {
+      "episode": 1750,
+      "metric": "score_mean",
+      "value": 718.25,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/best/best_ep001750_score_mean_718.250.pt",
+      "checkpoint": "best_ep001750_score_mean_718.250.pt",
+      "score_mean": 718.25,
+      "lines_mean": 0.125,
+      "pieces_mean": 30.375,
+      "training_epsilon": 0.050000000000000044,
+      "decisions": 44034,
+      "learn_steps": 43035
+    },
+    {
+      "episode": 4000,
+      "metric": "score_mean",
+      "value": 766.5,
+      "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/M/seed4/best/best_ep004000_score_mean_766.500.pt",
+      "checkpoint": "best_ep004000_score_mean_766.500.pt",
+      "score_mean": 766.5,
+      "lines_mean": 0.25,
+      "pieces_mean": 32.0,
+      "training_epsilon": 0.050000000000000044,
+      "decisions": 109740,
+      "learn_steps": 108741
+    }
+  ]
+}

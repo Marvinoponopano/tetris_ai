@@ -1,0 +1,53 @@
+{
+  "name": "B",
+  "variant": null,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "metric": "score_mean",
+  "eval_every": 100,
+  "eval_games": 8,
+  "eval_seed": 20260928,
+  "eval_max_pieces": 1000,
+  "log_every": 100,
+  "note": "moderate: enough episodes for the schedule to anneal and the score to have a chance to separate from random",
+  "output_dir": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl",
+  "config": {
+    "episodes": 2000,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "buffer_size": 50000,
+    "gamma": 0.99,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 40000,
+    "target_update_steps": 500,
+    "min_buffer_size": 1000,
+    "max_pieces": 200,
+    "hidden_sizes": [
+      256,
+      256
+    ],
+    "reward": null,
+    "seed": 0,
+    "device": "cpu",
+    "checkpoint_every": 500,
+    "log_every": 100,
+    "label": "B: moderate: enough episodes for the schedule to anneal and the score to have a chance to separate from random"
+  },
+  "config_id": "95d2be856b5f",
+  "environment": {
+    "python_version": "3.9.6",
+    "python_implementation": "CPython",
+    "executable": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "numpy": "2.0.2",
+    "pygame": "2.6.1"
+  },
+  "written_at": "2026-09-28T16:51:30.766454+00:00"
+}

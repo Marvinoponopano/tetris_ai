@@ -1,0 +1,265 @@
+{
+  "agent": "heuristic/lookahead=2+beam=2",
+  "num_games": 30,
+  "seed": 123,
+  "max_pieces": 400,
+  "elapsed_seconds": 489.23613708399995,
+  "stats": {
+    "games": 30,
+    "score_mean": 161290.8,
+    "score_median": 161243.0,
+    "score_min": 155724.0,
+    "score_max": 167794.0,
+    "score_stdev": 3240.325381703255,
+    "lines_mean": 158.7,
+    "lines_max": 159.0,
+    "lines_total": 4761.0,
+    "pieces_mean": 400.0,
+    "pieces_max": 400.0,
+    "game_length_mean": 400.0,
+    "game_length_max": 400.0,
+    "games_capped": 30.0
+  },
+  "games": [
+    {
+      "game": 0,
+      "seed": 123,
+      "score": 159596,
+      "lines_cleared": 157,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 1,
+      "seed": 124,
+      "score": 164578,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 2,
+      "seed": 125,
+      "score": 161546,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 3,
+      "seed": 126,
+      "score": 160652,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 4,
+      "seed": 127,
+      "score": 160548,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 5,
+      "seed": 128,
+      "score": 164970,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 6,
+      "seed": 129,
+      "score": 156906,
+      "lines_cleared": 158,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 7,
+      "seed": 130,
+      "score": 159314,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 8,
+      "seed": 131,
+      "score": 162180,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 9,
+      "seed": 132,
+      "score": 160940,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 10,
+      "seed": 133,
+      "score": 162066,
+      "lines_cleared": 158,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 11,
+      "seed": 134,
+      "score": 163664,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 12,
+      "seed": 135,
+      "score": 158146,
+      "lines_cleared": 158,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 13,
+      "seed": 136,
+      "score": 162044,
+      "lines_cleared": 158,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 14,
+      "seed": 137,
+      "score": 158374,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 15,
+      "seed": 138,
+      "score": 156712,
+      "lines_cleared": 158,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 16,
+      "seed": 139,
+      "score": 166980,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 17,
+      "seed": 140,
+      "score": 159922,
+      "lines_cleared": 158,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 18,
+      "seed": 141,
+      "score": 162878,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 19,
+      "seed": 142,
+      "score": 158994,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 20,
+      "seed": 143,
+      "score": 167794,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 21,
+      "seed": 144,
+      "score": 157812,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 22,
+      "seed": 145,
+      "score": 156094,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 23,
+      "seed": 146,
+      "score": 155724,
+      "lines_cleared": 158,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 24,
+      "seed": 147,
+      "score": 164486,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 25,
+      "seed": 148,
+      "score": 166220,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 26,
+      "seed": 149,
+      "score": 163602,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 27,
+      "seed": 150,
+      "score": 163838,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 28,
+      "seed": 151,
+      "score": 162682,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    },
+    {
+      "game": 29,
+      "seed": 152,
+      "score": 159462,
+      "lines_cleared": 159,
+      "pieces": 400,
+      "capped": true
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "experiment": "B",
+  "variant": null,
+  "metric": "score_mean",
+  "episodes": 2000,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "eval": {
+    "every": 100,
+    "games": 8,
+    "seed": 20260928,
+    "max_pieces": 1000,
+    "tail_window": 3
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "episodes_trained": 2000,
+      "evaluations": 21,
+      "first": {
+        "score_mean": 248.75,
+        "score_median": 244.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 12.375
+      },
+      "final": {
+        "score_mean": 578.5,
+        "score_median": 599.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 24.25
+      },
+      "tail": {
+        "score_mean": 594.0,
+        "score_median": 605.6666666666666,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 24.875
+      },
+      "deltas": {
+        "score_mean": 345.25,
+        "score_median": 361.66666666666663,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 12.5
+      },
+      "best": {
+        "episode": 1000,
+        "value": 622.0,
+        "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed0/best/best_ep001000_score_mean_622.000.pt",
+        "score_mean": 622.0,
+        "lines_mean": 0.0,
+        "pieces_mean": 27.875
+      },
+      "best_training_score": 896,
+      "elapsed_seconds": 204.19922870800002
+    },
+    {
+      "seed": 1,
+      "episodes_trained": 2000,
+      "evaluations": 21,
+      "first": {
+        "score_mean": 248.75,
+        "score_median": 244.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 12.375
+      },
+      "final": {
+        "score_mean": 558.5,
+        "score_median": 566.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 23.125
+      },
+      "tail": {
+        "score_mean": 568.6666666666666,
+        "score_median": 562.3333333333334,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 23.458333333333332
+      },
+      "deltas": {
+        "score_mean": 319.91666666666663,
+        "score_median": 318.33333333333337,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 11.083333333333332
+      },
+      "best": {
+        "episode": 1100,
+        "value": 669.0,
+        "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed1/best/best_ep001100_score_mean_669.000.pt",
+        "score_mean": 669.0,
+        "lines_mean": 0.25,
+        "pieces_mean": 26.875
+      },
+      "best_training_score": 896,
+      "elapsed_seconds": 203.91896466699998
+    },
+    {
+      "seed": 2,
+      "episodes_trained": 2000,
+      "evaluations": 21,
+      "first": {
+        "score_mean": 248.75,
+        "score_median": 244.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 12.375
+      },
+      "final": {
+        "score_mean": 537.0,
+        "score_median": 587.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 23.625
+      },
+      "tail": {
+        "score_mean": 493.9166666666667,
+        "score_median": 500.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 21.625
+      },
+      "deltas": {
+        "score_mean": 245.16666666666669,
+        "score_median": 256.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 9.25
+      },
+      "best": {
+        "episode": 100,
+        "value": 632.25,
+        "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed2/best/best_ep000100_score_mean_632.250.pt",
+        "score_mean": 632.25,
+        "lines_mean": 0.125,
+        "pieces_mean": 25.625
+      },
+      "best_training_score": 1016,
+      "elapsed_seconds": 197.968679833
+    },
+    {
+      "seed": 3,
+      "episodes_trained": 2000,
+      "evaluations": 21,
+      "first": {
+        "score_mean": 248.75,
+        "score_median": 244.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 12.375
+      },
+      "final": {
+        "score_mean": 557.5,
+        "score_median": 542.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 22.625
+      },
+      "tail": {
+        "score_mean": 564.0,
+        "score_median": 539.3333333333334,
+        "lines_mean": 0.041666666666666664,
+        "lines_per_100_pieces": 0.1727,
+        "pieces_mean": 23.25
+      },
+      "deltas": {
+        "score_mean": 315.25,
+        "score_median": 295.33333333333337,
+        "lines_mean": 0.041666666666666664,
+        "lines_per_100_pieces": 0.1727,
+        "pieces_mean": 10.875
+      },
+      "best": {
+        "episode": 1000,
+        "value": 643.25,
+        "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed3/best/best_ep001000_score_mean_643.250.pt",
+        "score_mean": 643.25,
+        "lines_mean": 0.125,
+        "pieces_mean": 26.75
+      },
+      "best_training_score": 1010,
+      "elapsed_seconds": 206.35641133299998
+    },
+    {
+      "seed": 4,
+      "episodes_trained": 2000,
+      "evaluations": 21,
+      "first": {
+        "score_mean": 248.75,
+        "score_median": 244.0,
+        "lines_mean": 0.0,
+        "lines_per_100_pieces": 0.0,
+        "pieces_mean": 12.375
+      },
+      "final": {
+        "score_mean": 645.75,
+        "score_median": 623.0,
+        "lines_mean": 0.125,
+        "lines_per_100_pieces": 0.4673,
+        "pieces_mean": 26.75
+      },
+      "tail": {
+        "score_mean": 573.5,
+        "score_median": 557.6666666666666,
+        "lines_mean": 0.041666666666666664,
+        "lines_per_100_pieces": 0.15576666666666666,
+        "pieces_mean": 24.375
+      },
+      "deltas": {
+        "score_mean": 324.75,
+        "score_median": 313.66666666666663,
+        "lines_mean": 0.041666666666666664,
+        "lines_per_100_pieces": 0.15576666666666666,
+        "pieces_mean": 12.0
+      },
+      "best": {
+        "episode": 2000,
+        "value": 645.75,
+        "path": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/experiments/rl/B/seed4/best/best_ep002000_score_mean_645.750.pt",
+        "score_mean": 645.75,
+        "lines_mean": 0.125,
+        "pieces_mean": 26.75
+      },
+      "best_training_score": 948,
+      "elapsed_seconds": 204.451258542
+    }
+  ],
+  "metrics": {
+    "score_mean": {
+      "first_mean": 248.75,
+      "tail_mean": 558.8166666666666,
+      "delta_mean": 310.06666666666666,
+      "delta_sd": 38.04394388949003,
+      "deltas": [
+        345.25,
+        319.91666666666663,
+        245.16666666666669,
+        315.25,
+        324.75
+      ],
+      "improved_seeds": 5,
+      "n_seeds": 5,
+      "verdict": "improving"
+    },
+    "score_median": {
+      "first_mean": 244.0,
+      "tail_mean": 553.0,
+      "delta_mean": 309.0,
+      "delta_sd": 38.33550718473814,
+      "deltas": [
+        361.66666666666663,
+        318.33333333333337,
+        256.0,
+        295.33333333333337,
+        313.66666666666663
+      ],
+      "improved_seeds": 5,
+      "n_seeds": 5,
+      "verdict": "improving"
+    },
+    "lines_mean": {
+      "first_mean": 0.0,
+      "tail_mean": 0.016666666666666666,
+      "delta_mean": 0.016666666666666666,
+      "delta_sd": 0.02282177322938192,
+      "deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.041666666666666664,
+        0.041666666666666664
+      ],
+      "improved_seeds": 2,
+      "n_seeds": 5,
+      "verdict": "mixed"
+    },
+    "lines_per_100_pieces": {
+      "first_mean": 0.0,
+      "tail_mean": 0.06569333333333334,
+      "delta_mean": 0.06569333333333334,
+      "delta_sd": 0.09015330584928961,
+      "deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.1727,
+        0.15576666666666666
+      ],
+      "improved_seeds": 2,
+      "n_seeds": 5,
+      "verdict": "mixed"
+    },
+    "pieces_mean": {
+      "first_mean": 12.375,
+      "tail_mean": 23.516666666666666,
+      "delta_mean": 11.141666666666666,
+      "delta_sd": 1.2484712874373827,
+      "deltas": [
+        12.5,
+        11.083333333333332,
+        9.25,
+        10.875,
+        12.0
+      ],
+      "improved_seeds": 5,
+      "n_seeds": 5,
+      "verdict": "improving"
+    }
+  },
+  "verdict": "improving",
+  "training": {
+    "episodes_total": 10000,
+    "decisions_total": 214763,
+    "learn_steps_total": 209768,
+    "elapsed_seconds": 1016.895,
+    "best_training_score": 1016
+  },
+  "config": {
+    "episodes": 2000,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "buffer_size": 50000,
+    "gamma": 0.99,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 40000,
+    "target_update_steps": 500,
+    "min_buffer_size": 1000,
+    "max_pieces": 200,
+    "hidden_sizes": [
+      256,
+      256
+    ],
+    "reward": null,
+    "seed": 0,
+    "device": "cpu",
+    "checkpoint_every": 500,
+    "log_every": 100,
+    "label": "B: moderate: enough episodes for the schedule to anneal and the score to have a chance to separate from random"
+  },
+  "config_id": "95d2be856b5f",
+  "note": "moderate: enough episodes for the schedule to anneal and the score to have a chance to separate from random",
+  "environment": {
+    "python_version": "3.9.6",
+    "python_implementation": "CPython",
+    "executable": "/Users/marvinma/Desktop/VSCode/tetrai/tetris_ai/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "numpy": "2.0.2",
+    "pygame": "2.6.1"
+  },
+  "started_at": "2026-09-28T16:51:31.845299+00:00",
+  "finished_at": "2026-09-28T16:57:18.488008+00:00",
+  "elapsed_seconds": 1016.895
+}
